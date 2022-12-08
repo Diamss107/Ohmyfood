@@ -15,6 +15,10 @@ body {
   padding: 0;
 }
 
+.margined {
+  margin: 0 15px;
+}
+
 .current-location {
   display: flex;
   justify-content: center;
@@ -30,6 +34,16 @@ body {
   color: #353535;
 }
 
+.explore-button {
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 30px;
+  margin: 20px;
+  box-shadow: 0 3px 12px grey;
+}
+
 .header {
   position: relative;
   z-index: 10;
@@ -43,6 +57,21 @@ body {
   font-family: "Shrikhand", "Trebuchet MS";
   margin-top: 5px;
   font-size: 2em;
+}
+
+.tuto {
+  display: flex;
+  flex-direction: column;
+}
+.tuto__part1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.tuto__part1__title {
+  width: 80%;
+  margin: 30px 0 0 0;
 }
 
 .footer {
