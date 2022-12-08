@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../../../Shrikhand-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../Roboto-Regular.ttf") format("truetype");
+}
+* {
+  font-family: "Roboto", "Trebuchet MS";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.current-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #eaeaea;
+}
+.current-location__icon {
+  color: #353535;
+}
+.current-location__text {
+  margin-left: 15px;
+  color: #353535;
+}
+
+.header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 6px grey;
+  height: 65px;
+}
+.header__logo {
+  font-family: "Shrikhand", "Trebuchet MS";
+  margin-top: 5px;
+  font-size: 2em;
+}/*# sourceMappingURL=main.css.map */

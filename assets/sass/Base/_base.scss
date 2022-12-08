@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'Shrikhand';
+	src: url('../../../Shrikhand-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../../../Roboto-Regular.ttf') format('truetype');
+}
+
+* {
+	font-family: 'Roboto', 'Trebuchet MS';
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
