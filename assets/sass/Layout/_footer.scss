@@ -1,0 +1,34 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 125px;
+	background-color: #353535;
+	color: white;
+	padding: 25px;
+
+	&__title {
+		font-family: $secondaryFont;
+		font-weight: normal;
+		margin: 0;
+		font-size: 1.1em;
+	}
+
+	&__links {
+		display: flex;
+		justify-content: space-around;
+		height: 72%;
+		flex-direction: column;
+
+		&__link {
+			color: white;
+			text-decoration: none;
+			font-size: 0.8em;
+		}
+
+		&__icon {
+			font-size: 0.7em;
+			margin-right: 5px;
+		}
+	}
+}

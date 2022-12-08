@@ -43,4 +43,35 @@ body {
   font-family: "Shrikhand", "Trebuchet MS";
   margin-top: 5px;
   font-size: 2em;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 125px;
+  background-color: #353535;
+  color: white;
+  padding: 25px;
+}
+.footer__title {
+  font-family: "Shrikhand", "Trebuchet MS";
+  font-weight: normal;
+  margin: 0;
+  font-size: 1.1em;
+}
+.footer__links {
+  display: flex;
+  justify-content: space-around;
+  height: 72%;
+  flex-direction: column;
+}
+.footer__links__link {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+.footer__links__icon {
+  font-size: 0.7em;
+  margin-right: 5px;
 }/*# sourceMappingURL=main.css.map */
