@@ -1,0 +1,16 @@
+.current-location {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	background-color: #eaeaea;
+	$hightlightColor: #353535;
+	&__icon {
+		color: $hightlightColor;
+	}
+
+	&__text {
+		margin-left: 15px;
+		color: $hightlightColor;
+	}
+}

@@ -1,0 +1,15 @@
+.header {
+	position: relative;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 6px grey;
+	height: 65px;
+
+	&__logo {
+		font-family: 'Shrikhand', 'Trebuchet MS';
+		margin-top: 5px;
+		font-size: 2em;
+	}
+}
