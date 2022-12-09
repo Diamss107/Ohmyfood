@@ -55,7 +55,7 @@ body {
 .tuto-card--hightlighting > .tuto-card__body {
   background-color: #f5edff;
 }
-.tuto-card--hightlighting > .tuto-card__body > .tuto-card__body__icon {
+.tuto-card--hightlighting > .tuto-card__body .tuto-card__body__icon {
   color: #9356dc;
 }
 .tuto-card__number {
@@ -134,14 +134,16 @@ body {
 .restaurant-card__infos__heart-icon-solid {
   z-index: 2;
   margin-right: 30px;
-  font-size: 1.7em;
+  font-size: 1.5em;
   margin-bottom: 5px;
   color: rgba(0, 0, 0, 0);
 }
-.restaurant-card__infos__heart-icon-solid:hover {
+.restaurant-card__infos__heart-icon:hover > .restaurant-card__infos__heart-icon-regular {
+  display: none;
+}
+.restaurant-card__infos__heart-icon:hover > .restaurant-card__infos__heart-icon-solid {
   cursor: pointer;
   background-image: linear-gradient(to top right, #ff79da, #9356dc);
-  color: rgba(0, 0, 0, 0);
   -webkit-background-clip: text;
           background-clip: text;
 }
