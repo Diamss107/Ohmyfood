@@ -85,6 +85,67 @@ body {
   background-color: #f5edff;
 }
 
+.restaurant-card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  box-shadow: 0 6px 6px #d2d2d2;
+  border-radius: 15px;
+  height: 220px;
+  margin: 10px 0;
+}
+.restaurant-card__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  height: 70%;
+}
+.restaurant-card__new {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-color: #99e2d0;
+  color: #239c7e;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  border-radius: 2px;
+}
+.restaurant-card__infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+  height: 30%;
+}
+.restaurant-card__infos__text {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.restaurant-card__infos__text__title {
+  margin: 0;
+}
+.restaurant-card__infos__heart-icon-regular {
+  margin-right: 30px;
+  font-size: 1.5em;
+}
+.restaurant-card__infos__heart-icon-solid {
+  z-index: 2;
+  margin-right: 30px;
+  font-size: 1.7em;
+  margin-bottom: 5px;
+  color: rgba(0, 0, 0, 0);
+}
+.restaurant-card__infos__heart-icon-solid:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to top right, #ff79da, #9356dc);
+  color: rgba(0, 0, 0, 0);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
 .header {
   position: relative;
   z-index: 10;
@@ -125,6 +186,15 @@ body {
   justify-content: space-between;
 }
 
+.restaurants {
+  display: flex;
+  flex-direction: column;
+}
+.restaurants__cards {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -133,6 +203,7 @@ body {
   background-color: #353535;
   color: white;
   padding: 25px;
+  margin-top: 60px;
 }
 .footer__title {
   font-family: "Shrikhand", "Trebuchet MS";
