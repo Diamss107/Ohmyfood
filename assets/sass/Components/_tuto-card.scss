@@ -1,11 +1,16 @@
 .tuto-card {
-	// TODO Revoir le responsive
 	display: flex;
 	align-items: center;
 	background-color: white;
-	width: 375px;
+	width: 100%;
 	margin: 10px 0;
 	height: 70px;
+	&--hightlighting > &__body {
+		background-color: #f5edff;
+	}
+	&--hightlighting > &__body > &__body__icon {
+		color: $primaryColor;
+	}
 
 	&__number {
 		display: flex;
@@ -18,7 +23,7 @@
 		height: 25px;
 		border-radius: 1000px;
 		z-index: 2;
-		margin-right: -13px; // ! Changer cette horrible ligne
+		margin-right: -12px; // TODO! Changer cette horrible ligne
 	}
 
 	&__body {
@@ -33,14 +38,6 @@
 			color: #7e7e7e;
 			font-size: 1.2em;
 			margin: 0 20px 0 30px; // TODO Trouver un meilleur moyen de changer l'espacement avec &__number
-
-			&--hightlighting {
-				color: $primaryColor; // TODO Trouver une meilleur methode pour la mise en valeur
-			}
-		}
-
-		&--hightlighting {
-			background-color: #f5edff; // TODO Trouver une meilleur methode pour la mise en valeur
 		}
 	}
 }
