@@ -1,11 +1,13 @@
 .tuto-card {
 	$p: &;
+	$tutocards: 3;
 
+	position: relative;
 	display: flex;
 	align-items: center;
 	background-color: white;
-	width: 100%;
-	margin: 10px 0;
+	width: 95%;
+	margin: 10px 0 15px 10px;
 	height: 70px;
 	&--hightlighting {
 		> #{$p}__body {
@@ -15,19 +17,10 @@
 			color: $primaryColor;
 		}
 	}
-
-	&__number {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: $primaryColor;
-		color: white;
-		font-size: 0.8em;
-		width: 27px;
-		height: 25px;
-		border-radius: 1000px;
-		z-index: 2;
-		margin-right: -12px; // TODO! Changer cette horrible ligne
+	@for $number from 1 through $tutocards {
+		&:nth-child(#{$number})::before {
+			@include numberBeforeTutoCard($number);
+		}
 	}
 
 	&__body {
@@ -37,11 +30,12 @@
 		width: 100%;
 		height: 100%;
 		box-shadow: 0 5px 6px rgb(210, 210, 210);
+		font-weight: bold;
 
 		&__icon {
 			color: #7e7e7e;
 			font-size: 1.2em;
-			margin: 0 20px 0 30px; // TODO Trouver un meilleur moyen de changer l'espacement avec &__number
+			margin: 0 20px 0 30px;
 		}
 	}
 }

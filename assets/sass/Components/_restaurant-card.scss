@@ -15,17 +15,20 @@
 		height: 70%;
 	}
 
-	&__new {
-		position: absolute; // ? 1. Pas forcément la meilleur façon de faire, à vérifier
-		right: 15px; // ? 1
-		top: 15px; // ? 1
+	&--new {
+		&::before {
+			content: 'Nouveau';
+			position: absolute;
+			right: 15px;
+			top: 15px;
 
-		background-color: $tertiaryColor;
-		color: #239c7e;
-		padding: 5px 10px;
-		font-size: 0.8em;
-		border-radius: 2px;
-		font-weight: bold;
+			background-color: $tertiaryColor;
+			color: #239c7e;
+			padding: 5px 10px;
+			font-size: 0.8em;
+			border-radius: 2px;
+			font-weight: bold;
+		}
 	}
 
 	&__infos {

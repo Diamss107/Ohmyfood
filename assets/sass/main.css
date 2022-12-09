@@ -20,8 +20,8 @@ a {
   text-decoration: none;
 }
 
-.margined {
-  margin: 0 15px;
+.paddinged {
+  padding: 0 15px;
 }
 
 .current-location {
@@ -53,11 +53,12 @@ a {
 }
 
 .tuto-card {
+  position: relative;
   display: flex;
   align-items: center;
   background-color: white;
-  width: 100%;
-  margin: 10px 0;
+  width: 95%;
+  margin: 10px 0 15px 10px;
   height: 70px;
 }
 .tuto-card--hightlighting > .tuto-card__body {
@@ -66,10 +67,13 @@ a {
 .tuto-card--hightlighting .tuto-card__body__icon {
   color: #9356dc;
 }
-.tuto-card__number {
+.tuto-card:nth-child(1)::before {
+  content: "1";
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  left: -13px;
   background-color: #9356dc;
   color: white;
   font-size: 0.8em;
@@ -77,7 +81,36 @@ a {
   height: 25px;
   border-radius: 1000px;
   z-index: 2;
-  margin-right: -12px;
+}
+.tuto-card:nth-child(2)::before {
+  content: "2";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -13px;
+  background-color: #9356dc;
+  color: white;
+  font-size: 0.8em;
+  width: 27px;
+  height: 25px;
+  border-radius: 1000px;
+  z-index: 2;
+}
+.tuto-card:nth-child(3)::before {
+  content: "3";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -13px;
+  background-color: #9356dc;
+  color: white;
+  font-size: 0.8em;
+  width: 27px;
+  height: 25px;
+  border-radius: 1000px;
+  z-index: 2;
 }
 .tuto-card__body {
   display: flex;
@@ -86,6 +119,7 @@ a {
   width: 100%;
   height: 100%;
   box-shadow: 0 5px 6px rgb(210, 210, 210);
+  font-weight: bold;
 }
 .tuto-card__body__icon {
   color: #7e7e7e;
@@ -109,7 +143,8 @@ a {
   border-radius: 15px 15px 0 0;
   height: 70%;
 }
-.restaurant-card__new {
+.restaurant-card--new::before {
+  content: "Nouveau";
   position: absolute;
   right: 15px;
   top: 15px;
@@ -195,6 +230,9 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: #f7f7f7;
+  padding-bottom: 35px;
+  margin-bottom: 30px;
 }
 .tuto__part1__title {
   width: 80%;
@@ -217,6 +255,9 @@ a {
 .restaurants {
   display: flex;
   flex-direction: column;
+  background-color: #f7f7f7;
+  padding-top: 30px;
+  margin-top: 50px;
 }
 .restaurants__cards {
   display: flex;

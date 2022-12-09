@@ -5,3 +5,18 @@
 	align-items: center;
 	justify-content: center;
 }
+@mixin numberBeforeTutoCard($number) {
+	content: '' + $number;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: -13px; // ? Bon il est toujours la ce - ...
+	background-color: $primaryColor;
+	color: white;
+	font-size: 0.8em;
+	width: 27px;
+	height: 25px;
+	border-radius: 1000px;
+	z-index: 2;
+}
