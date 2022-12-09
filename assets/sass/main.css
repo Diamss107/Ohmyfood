@@ -48,9 +48,15 @@ body {
   display: flex;
   align-items: center;
   background-color: white;
-  width: 375px;
+  width: 100%;
   margin: 10px 0;
   height: 70px;
+}
+.tuto-card--hightlighting > .tuto-card__body {
+  background-color: #f5edff;
+}
+.tuto-card--hightlighting > .tuto-card__body > .tuto-card__body__icon {
+  color: #9356dc;
 }
 .tuto-card__number {
   display: flex;
@@ -63,7 +69,7 @@ body {
   height: 25px;
   border-radius: 1000px;
   z-index: 2;
-  margin-right: -13px;
+  margin-right: -12px;
 }
 .tuto-card__body {
   display: flex;
@@ -77,12 +83,6 @@ body {
   color: #7e7e7e;
   font-size: 1.2em;
   margin: 0 20px 0 30px;
-}
-.tuto-card__body__icon--hightlighting {
-  color: #9356dc;
-}
-.tuto-card__body--hightlighting {
-  background-color: #f5edff;
 }
 
 .header {
