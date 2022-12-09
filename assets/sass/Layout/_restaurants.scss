@@ -1,0 +1,9 @@
+.restaurants {
+	display: flex;
+	flex-direction: column;
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+	}
+}
