@@ -15,6 +15,11 @@ body {
   padding: 0;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 .margined {
   margin: 0 15px;
 }
@@ -34,14 +39,17 @@ body {
   color: #353535;
 }
 
-.explore-button {
+.button {
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   color: white;
-  text-decoration: none;
   padding: 15px 20px;
   border-radius: 30px;
   margin: 20px;
-  box-shadow: 0 3px 12px grey;
+  box-shadow: 0 3px 12px #d2d2d2;
+}
+.button:hover {
+  background-image: linear-gradient(to bottom right, #ff83dd, #985ede);
+  box-shadow: 0 3px 12px #929292;
 }
 
 .tuto-card {
@@ -55,7 +63,7 @@ body {
 .tuto-card--hightlighting > .tuto-card__body {
   background-color: #f5edff;
 }
-.tuto-card--hightlighting > .tuto-card__body .tuto-card__body__icon {
+.tuto-card--hightlighting .tuto-card__body__icon {
   color: #9356dc;
 }
 .tuto-card__number {
@@ -74,7 +82,7 @@ body {
 .tuto-card__body {
   display: flex;
   align-items: center;
-  border-radius: 15px;
+  border-radius: 20px;
   width: 100%;
   height: 100%;
   box-shadow: 0 5px 6px rgb(210, 210, 210);
@@ -110,6 +118,7 @@ body {
   padding: 5px 10px;
   font-size: 0.8em;
   border-radius: 2px;
+  font-weight: bold;
 }
 .restaurant-card__infos {
   display: flex;
@@ -127,21 +136,35 @@ body {
 .restaurant-card__infos__text__title {
   margin: 0;
 }
-.restaurant-card__infos__heart-icon-regular {
-  margin-right: 30px;
+
+.heart-icon {
   font-size: 1.5em;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
 }
-.restaurant-card__infos__heart-icon-solid {
-  z-index: 2;
-  margin-right: 30px;
-  font-size: 1.5em;
-  margin-bottom: 5px;
+.heart-icon-regular {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heart-icon-solid {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: rgba(0, 0, 0, 0);
 }
-.restaurant-card__infos__heart-icon:hover > .restaurant-card__infos__heart-icon-regular {
+.heart-icon:hover > .heart-icon-regular {
   display: none;
 }
-.restaurant-card__infos__heart-icon:hover > .restaurant-card__infos__heart-icon-solid {
+.heart-icon:hover > .heart-icon-solid {
   cursor: pointer;
   background-image: linear-gradient(to top right, #ff79da, #9356dc);
   -webkit-background-clip: text;
@@ -176,6 +199,9 @@ body {
 .tuto__part1__title {
   width: 80%;
   margin: 30px 0 0 0;
+}
+.tuto__part1__text {
+  font-weight: 500;
 }
 .tuto__part2 {
   display: flex;
@@ -221,7 +247,6 @@ body {
 }
 .footer__links__link {
   color: white;
-  text-decoration: none;
   font-size: 0.8em;
 }
 .footer__links__icon {

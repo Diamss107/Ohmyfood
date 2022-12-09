@@ -1,0 +1,21 @@
+.button {
+	background-image: linear-gradient(
+		to bottom right,
+		$secondaryColor,
+		$primaryColor
+	);
+	color: white;
+	padding: 15px 20px;
+	border-radius: 30px;
+	margin: 20px;
+	box-shadow: 0 3px 12px $shadowColor;
+
+	&:hover {
+		background-image: linear-gradient(
+			to bottom right,
+			lighten($secondaryColor, 2%),
+			lighten($primaryColor, 2%)
+		);
+		box-shadow: 0 3px 12px darken($shadowColor, 25%);
+	}
+}

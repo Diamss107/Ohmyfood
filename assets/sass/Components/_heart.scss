@@ -1,0 +1,30 @@
+.heart-icon {
+	font-size: 1.5em;
+	$size: 30px;
+	@include resizeHeart($size);
+	margin-right: 15px;
+
+	&-regular {
+		@include resizeHeart($size);
+	}
+
+	&-solid {
+		@include resizeHeart($size);
+
+		color: rgba($color: #000000, $alpha: 0);
+	}
+
+	&:hover > &-regular {
+		display: none;
+	}
+
+	&:hover > &-solid {
+		cursor: pointer;
+		background-image: linear-gradient(
+			to top right,
+			$secondaryColor,
+			$primaryColor
+		);
+		background-clip: text;
+	}
+}

@@ -25,6 +25,7 @@
 		padding: 5px 10px;
 		font-size: 0.8em;
 		border-radius: 2px;
+		font-weight: bold;
 	}
 
 	&__infos {
@@ -39,37 +40,9 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-evenly;
+
 			&__title {
 				margin: 0;
-			}
-		}
-
-		&__heart-icon {
-			&-regular {
-				margin-right: 30px;
-				font-size: 1.5em;
-			}
-
-			&-solid {
-				z-index: 2;
-				margin-right: 30px;
-				font-size: 1.5em;
-				margin-bottom: 5px;
-				color: rgba($color: #000000, $alpha: 0);
-			}
-
-			&:hover > &-regular {
-				display: none;
-			}
-
-			&:hover > &-solid {
-				cursor: pointer;
-				background-image: linear-gradient(
-					to top right,
-					$secondaryColor,
-					$primaryColor
-				);
-				background-clip: text;
 			}
 		}
 	}

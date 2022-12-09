@@ -1,0 +1,7 @@
+@mixin resizeHeart($size) {
+	width: $size;
+	height: $size;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

@@ -1,9 +1,11 @@
 @import './Base/base';
 @import './Utils/variables';
+@import './Utils/mixines';
 @import './Components/current-location';
-@import './Components/explore-button';
+@import './Components/button';
 @import './Components/tuto-card';
 @import './Components/restaurant-card';
+@import './Components/heart';
 @import './Layout/header';
 @import './Layout/tuto';
 @import './Layout/restaurants';
