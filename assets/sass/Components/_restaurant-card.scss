@@ -44,24 +44,31 @@
 			}
 		}
 
-		&__heart-icon-regular {
-			margin-right: 30px;
-			font-size: 1.5em;
-		}
-		&__heart-icon-solid {
-			z-index: 2;
-			margin-right: 30px;
-			font-size: 1.7em;
-			margin-bottom: 5px;
-			color: rgba($color: #000000, $alpha: 0);
-			&:hover {
+		&__heart-icon {
+			&-regular {
+				margin-right: 30px;
+				font-size: 1.5em;
+			}
+
+			&-solid {
+				z-index: 2;
+				margin-right: 30px;
+				font-size: 1.5em;
+				margin-bottom: 5px;
+				color: rgba($color: #000000, $alpha: 0);
+			}
+
+			&:hover > &-regular {
+				display: none;
+			}
+
+			&:hover > &-solid {
 				cursor: pointer;
 				background-image: linear-gradient(
 					to top right,
 					$secondaryColor,
 					$primaryColor
 				);
-				color: rgba($color: #000000, $alpha: 0);
 				background-clip: text;
 			}
 		}

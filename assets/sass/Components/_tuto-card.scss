@@ -7,9 +7,14 @@
 	height: 70px;
 	&--hightlighting > &__body {
 		background-color: #f5edff;
-	}
-	&--hightlighting > &__body > &__body__icon {
-		color: $primaryColor;
+
+		// &__icon {
+		// 	color: $primaryColor; // TODO? Essayer de comprendre pourquoi ça marche pas
+		// }
+
+		.tuto-card__body__icon {
+			color: $primaryColor;
+		}
 	}
 
 	&__number {
