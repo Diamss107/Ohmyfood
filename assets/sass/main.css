@@ -41,6 +41,9 @@ a {
 
 .button {
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   padding: 15px 20px;
   border-radius: 30px;
