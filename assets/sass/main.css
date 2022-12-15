@@ -219,16 +219,20 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 12px;
-  margin: 10px 0;
+  margin: 5px 0;
   border-radius: 15px;
-  box-shadow: 0 5px 6px rgb(210, 210, 210);
+  box-shadow: 0 5px 6px #d2d2d2;
 }
 .menu-card__text__title {
   margin: 0;
+  font-size: 1em;
+}
+.menu-card__text__desc {
+  font-size: 0.85em;
 }
 .menu-card__price {
   align-self: flex-end;
-  font-size: 0.85em;
+  font-size: 0.9em;
   font-weight: bold;
 }
 
@@ -340,7 +344,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 15px 30px 0px 30px;
+  margin: 10px 20px 0px 20px;
 }
 .menu-wrapper__header__title {
   font-family: "Shrikhand", "Trebuchet MS";
@@ -354,7 +358,7 @@ a {
 .menu-wrapper__menu__section__title {
   font-weight: lighter;
   text-transform: uppercase;
-  font-size: 1.1em;
+  font-size: 1em;
   padding-bottom: 5px;
 }
 .menu-wrapper__menu__section__title__underline {
