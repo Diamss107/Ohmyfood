@@ -1,0 +1,58 @@
+.restaurant-img {
+	&__image {
+		width: 100%;
+	}
+}
+
+.menu-wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border-radius: 40px;
+	background-color: $primaryBackgroundColor;
+	margin-top: -50px; // ? A t'on une autre solution ?
+	z-index: 2;
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 15px 30px 0px 30px;
+		&__title {
+			font-family: $secondaryFont;
+			font-weight: normal;
+			font-size: 1.6em;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+
+		&__section {
+			&__title {
+				font-weight: lighter;
+				text-transform: uppercase;
+				font-size: 1.1em;
+				padding-bottom: 5px;
+
+				&__underline {
+					padding-bottom: 5px;
+					border-bottom: 3px solid $tertiaryColor;
+				}
+			}
+		}
+	}
+
+	&__container {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&__order-button {
+			padding: 15px 45px;
+		}
+	}
+
+	margin-bottom: 30px;
+}

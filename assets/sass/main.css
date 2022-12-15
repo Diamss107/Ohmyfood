@@ -209,6 +209,29 @@ a {
           background-clip: text;
 }
 
+.go-back-button {
+  margin-top: 5px;
+  font-size: 1.3em;
+}
+
+.menu-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 15px;
+  box-shadow: 0 5px 6px rgb(210, 210, 210);
+}
+.menu-card__text__title {
+  margin: 0;
+}
+.menu-card__price {
+  align-self: flex-end;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
 .header {
   position: relative;
   z-index: 10;
@@ -261,6 +284,7 @@ a {
   background-color: #f7f7f7;
   padding-top: 30px;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 .restaurants__cards {
   display: flex;
@@ -275,7 +299,7 @@ a {
   background-color: #353535;
   color: white;
   padding: 25px;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 .footer__title {
   font-family: "Shrikhand", "Trebuchet MS";
@@ -296,4 +320,53 @@ a {
 .footer__links__icon {
   font-size: 0.7em;
   margin-right: 5px;
+}
+
+.restaurant-img__image {
+  width: 100%;
+}
+
+.menu-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px;
+  background-color: #f7f7f7;
+  margin-top: -50px;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+.menu-wrapper__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 30px 0px 30px;
+}
+.menu-wrapper__header__title {
+  font-family: "Shrikhand", "Trebuchet MS";
+  font-weight: normal;
+  font-size: 1.6em;
+}
+.menu-wrapper__menu {
+  display: flex;
+  flex-direction: column;
+}
+.menu-wrapper__menu__section__title {
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  padding-bottom: 5px;
+}
+.menu-wrapper__menu__section__title__underline {
+  padding-bottom: 5px;
+  border-bottom: 3px solid #99e2d0;
+}
+.menu-wrapper__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-wrapper__container__order-button {
+  padding: 15px 45px;
 }/*# sourceMappingURL=main.css.map */

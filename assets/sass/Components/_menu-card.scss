@@ -1,0 +1,21 @@
+.menu-card {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px;
+	margin: 10px 0;
+	border-radius: 15px;
+	box-shadow: 0 5px 6px rgb(210, 210, 210);
+
+	&__text {
+		&__title {
+			margin: 0;
+		}
+	}
+
+	&__price {
+		align-self: flex-end;
+		font-size: 0.85em;
+		font-weight: bold;
+	}
+}

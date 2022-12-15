@@ -2,115 +2,136 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/4db20b3dcb.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../assets/sass/main.css" />
-    <title>Menu de À la française - Ohmyfood!</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://kit.fontawesome.com/4db20b3dcb.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="../assets/sass/main.css" />
+	<title>Menu de À la française - Ohmyfood!</title>
 </head>
 
 <body>
-    <header class="header">
-        <span class="header__logo">ohmyfood</span>
-    </header>
-    <section class="menu">
-        <div class="menu__header">
-            <h1 class="menu__header__title">À la française</h1>
-            <span class="fa-stack fa-1x heart-icon">
-                <i class="fa-regular fa-heart fa-stack-1x heart-icon-regular"></i>
-                <i class="fa-solid fa-heart fa-stack-1x heart-icon-solid"></i>
-            </span>
-        </div>
-        <div class="menu__section">
-            <h2 class="menu__section__title">Entrées</h2>
-            <div class="menu-card">
-                <div class="menu-card__text">
-                    <h3 class="menu-card__text__title">Tartare de poulpe acidulé</h3>
-                    <span class="menu-card__text__ingredients">Aux zestes d'orange</span>
-                </div>
-                <span class="menu-card__price">25€</span>
-            </div>
-            <div class="menu-card">
-                <div class="menu-card__text">
-                    <h3 class="menu-card__text__title">Velouté de légumes d'antan</h3>
-                    <span class="menu-card__text__ingredients">Carotte, panais, topinambour</span>
-                </div>
-                <span class="menu-card__price">35€</span>
-            </div>
-            <div class="menu-card">
-                <div class="menu-card__text">
-                    <h3 class="menu-card__text__title">Soupe à l'oignon</h3>
-                    <span class="menu-card__text__ingredients">Revisitée</span>
-                </div>
-                <span class="menu-card__price">20€</span>
-            </div>
-        </div>
-        <div class="menu__section">
-            <h2 class="menu__section__title">Plats</h2>
-            <div class="menu-card">
-                <div class="menu-card__text">
-                    <h3 class="menu-card__text__title">Coquilles Saint-Jacques</h3>
-                    <span class="menu-card__text__ingredients">Accompagnées d'une purée de panais</span>
-                </div>
-                <span class="menu-card__price">40€</span>
-            </div>
-            <div class="menu-card">
-                <div class="menu-card__text">
-                    <h3 class="menu-card__text__title">Magret de canard</h3>
-                    <span class="menu-card__text__ingredients">Et parmentier de pommes de terre</span>
-                </div>
-                <span class="menu-card__price">35€</span>
-            </div>
-            <div class="menu-card">
-                <div class="menu-card__text">
-                    <h3 class="menu-card__text__title">Pigeonneau d'Ille-et-Vilaine</h3>
-                    <span class="menu-card__text__ingredients">Sur son lit de gnocchis aux légumes</span>
-                </div>
-                <span class="menu-card__price">44€</span>
-            </div>
-        </div>
-        <div class="menu__section">
-            <h2 class="menu__section__title">Desserts</h2>
-            <div class="menu-card">
-                <div class="menu-card__text">
-                    <h3 class="menu-card__text__title">Pétales de violettes glacés</h3>
-                    <span class="menu-card__text__ingredients">Et purée de noisettes</span>
-                </div>
-                <span class="menu-card__price">18€</span>
-            </div>
-            <div class="menu-card">
-                <div class="menu-card__text">
-                    <h3 class="menu-card__text__title">Fondant au chocolat</h3>
-                    <span class="menu-card__text__ingredients">Revisité</span>
-                </div>
-                <span class="menu-card__price">22€</span>
-            </div>
-            <div class="menu-card">
-                <div class="menu-card__text">
-                    <h3 class="menu-card__text__title">Millefeuille croustillant</h3>
-                    <span class="menu-card__text__ingredients">Myrtille et pâte d'amande</span>
-                </div>
-                <span class="menu-card__price">23€</span>
-            </div>
-        </div>
-        <div class="button">Commander</div>
-    </section>
-    <footer class="footer">
-        <h4 class="footer__title">ohmyfood</h4>
-        <div class="footer__links">
-            <div>
-                <i class="fa-solid fa-utensils footer__links__icon fa-fw"></i>
-                <a href="#" class="footer__links__link">Proposer un restaurant</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-handshake-angle footer__links__icon fa-fw"></i>
-                <a href="#" class="footer__links__link">Devenir partenaire</a>
-            </div>
-            <a href="#" class="footer__links__link">Mentions légales</a>
-            <a href="mailto:eliopolito107@gmail.com" class="footer__links__link">Contact</a>
-        </div>
-    </footer>
+	<header class="header">
+		<a href="../index.html" class="go-back-button">
+			<i class="fa-solid fa-arrow-left"></i>
+		</a>
+		<span class="header__logo">ohmyfood</span>
+	</header>
+	<div class="restaurant-img">
+		<img class="restaurant-img__image" src="../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+			alt="À la française" />
+	</div>
+	<section class="menu-wrapper">
+		<div class="menu-wrapper__header">
+			<h1 class="menu-wrapper__header__title">À la française</h1>
+			<span class="fa-stack fa-1x heart-icon">
+				<i class="fa-regular fa-heart fa-stack-1x heart-icon-regular"></i>
+				<i class="fa-solid fa-heart fa-stack-1x heart-icon-solid"></i>
+			</span>
+		</div>
+		<div class="menu-wrapper__menu paddinged">
+			<div class="menu-wrapper__menu__section">
+				<h2 class="menu-wrapper__menu__section__title">
+					<span class="menu-wrapper__menu__section__title__underline">Entr</span>ées
+				</h2>
+				<div class="menu-card">
+					<div class="menu-card__text">
+						<h3 class="menu-card__text__title">Tartare de poulpe acidulé</h3>
+						<span class="menu-card__text__ingredients">Aux zestes d'orange</span>
+					</div>
+					<span class="menu-card__price">25€</span>
+				</div>
+				<div class="menu-card">
+					<div class="menu-card__text">
+						<h3 class="menu-card__text__title">Velouté de légumes d'antan</h3>
+						<span class="menu-card__text__ingredients">Carotte, panais, topinambour</span>
+					</div>
+					<span class="menu-card__price">35€</span>
+				</div>
+				<div class="menu-card">
+					<div class="menu-card__text">
+						<h3 class="menu-card__text__title">Soupe à l'oignon</h3>
+						<span class="menu-card__text__ingredients">Revisitée</span>
+					</div>
+					<span class="menu-card__price">20€</span>
+				</div>
+			</div>
+			<div class="menu-wrapper__menu__section">
+				<h2 class="menu-wrapper__menu__section__title">
+					<span class="menu-wrapper__menu__section__title__underline">Plat</span>s
+				</h2>
+				<div class="menu-card">
+					<div class="menu-card__text">
+						<h3 class="menu-card__text__title">Coquilles Saint-Jacques</h3>
+						<span class="menu-card__text__ingredients">Accompagnées d'une purée de panais</span>
+					</div>
+					<span class="menu-card__price">40€</span>
+				</div>
+				<div class="menu-card">
+					<div class="menu-card__text">
+						<h3 class="menu-card__text__title">Magret de canard</h3>
+						<span class="menu-card__text__ingredients">Et parmentier de pommes de terre</span>
+					</div>
+					<span class="menu-card__price">35€</span>
+				</div>
+				<div class="menu-card">
+					<div class="menu-card__text">
+						<h3 class="menu-card__text__title">
+							Pigeonneau d'Ille-et-Vilaine
+						</h3>
+						<span class="menu-card__text__ingredients">Sur son lit de gnocchis aux légumes</span>
+					</div>
+					<span class="menu-card__price">44€</span>
+				</div>
+			</div>
+			<div class="menu-wrapper__menu__section">
+				<h2 class="menu-wrapper__menu__section__title">
+					<span class="menu-wrapper__menu__section__title__underline">Dess</span>erts
+				</h2>
+				<div class="menu-card">
+					<div class="menu-card__text">
+						<h3 class="menu-card__text__title">
+							Pétales de violettes glacés
+						</h3>
+						<span class="menu-card__text__ingredients">Et purée de noisettes</span>
+					</div>
+					<span class="menu-card__price">18€</span>
+				</div>
+				<div class="menu-card">
+					<div class="menu-card__text">
+						<h3 class="menu-card__text__title">Fondant au chocolat</h3>
+						<span class="menu-card__text__ingredients">Revisité</span>
+					</div>
+					<span class="menu-card__price">22€</span>
+				</div>
+				<div class="menu-card">
+					<div class="menu-card__text">
+						<h3 class="menu-card__text__title">Millefeuille croustillant</h3>
+						<span class="menu-card__text__ingredients">Myrtille et pâte d'amande</span>
+					</div>
+					<span class="menu-card__price">23€</span>
+				</div>
+			</div>
+		</div>
+		<div class="menu-wrapper__container">
+			<a href="#" class="button menu-wrapper__container__order-button">Commander</a>
+		</div>
+	</section>
+	<footer class="footer">
+		<h4 class="footer__title">ohmyfood</h4>
+		<div class="footer__links">
+			<div>
+				<i class="fa-solid fa-utensils footer__links__icon fa-fw"></i>
+				<a href="#" class="footer__links__link">Proposer un restaurant</a>
+			</div>
+			<div>
+				<i class="fa-solid fa-handshake-angle footer__links__icon fa-fw"></i>
+				<a href="#" class="footer__links__link">Devenir partenaire</a>
+			</div>
+			<a href="#" class="footer__links__link">Mentions légales</a>
+			<a href="mailto:eliopolito107@gmail.com" class="footer__links__link">Contact</a>
+		</div>
+	</footer>
 </body>
 
 </html>
