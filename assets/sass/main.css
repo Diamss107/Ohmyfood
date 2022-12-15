@@ -218,10 +218,21 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px;
+  height: 65px;
+  width: 100%;
   margin: 5px 0;
   border-radius: 15px;
   box-shadow: 0 5px 6px #d2d2d2;
+}
+.menu-card:hover > .menu-card__order > .menu-card__order__icon {
+  display: flex;
+}
+.menu-card:hover > .menu-card__order {
+  width: 30%;
+}
+.menu-card__text {
+  margin: 12px;
+  margin-right: 0;
 }
 .menu-card__text__title {
   margin: 0;
@@ -230,10 +241,31 @@ a {
 .menu-card__text__desc {
   font-size: 0.85em;
 }
-.menu-card__price {
+.menu-card__order {
+  display: flex;
+  height: 100%;
+  width: 15%;
+}
+.menu-card__order__price {
+  margin-bottom: 12px;
   align-self: flex-end;
   font-size: 0.9em;
   font-weight: bold;
+}
+.menu-card__order__icon {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  color: white;
+  background-color: #99e2d0;
+  height: 100%;
+  width: 60px;
+  border-radius: 0 15px 15px 0;
+  margin-left: 12px;
+}
+.menu-card__order__icon:hover {
+  cursor: pointer;
 }
 
 .header {
