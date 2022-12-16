@@ -14,3 +14,11 @@
 		color: $hightlightColor;
 	}
 }
+
+@media screen and (min-width: 800px) {
+	.current-location {
+		background-color: white;
+		width: 45%;
+		justify-content: flex-end;
+	}
+}

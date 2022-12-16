@@ -1,5 +1,5 @@
-@import './Base/base';
 @import './Utils/variables';
+@import './Base/base';
 @import './Utils/mixines';
 @import './Components/current-location';
 @import './Components/button';
@@ -8,6 +8,7 @@
 @import './Components/heart';
 @import './Components/go-back-button';
 @import './Components/menu-card';
+@import './Layout/home-header';
 @import './Layout/header';
 @import './Layout/tuto';
 @import './Layout/restaurants';

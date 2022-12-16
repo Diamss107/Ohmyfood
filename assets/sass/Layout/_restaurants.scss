@@ -11,3 +11,13 @@
 		flex-direction: column;
 	}
 }
+@media screen and (min-width: 800px) {
+	.restaurants {
+		margin-top: 0;
+		&__cards {
+			flex-direction: row;
+			justify-content: space-around;
+			flex-wrap: wrap;
+		}
+	}
+}

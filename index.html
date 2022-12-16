@@ -10,19 +10,21 @@
 </head>
 
 <body>
-	<header class="header">
-		<span class="header__logo">ohmyfood</span>
-	</header>
-	<section class="current-location">
-		<i class="fa-solid fa-location-dot current-location__icon"></i>
-		<span class="current-location__text">Paris, Belleville</span>
+	<section class="home-header">
+		<header class="header">
+			<span class="header__logo">ohmyfood</span>
+		</header>
+		<div class="current-location">
+			<i class="fa-solid fa-location-dot current-location__icon"></i>
+			<span class="current-location__text">Paris, Belleville</span>
+		</div>
 	</section>
 	<main>
 		<section class="tuto">
 			<div class="tuto__part1 paddinged">
 				<h1 class="tuto__part1__title">Réservez le menu qui vous convient</h1>
 				<p class="tuto__part1__text">Découvrez des restaurants d'exeption, sélectionnés par nos soins</p>
-				<a href="#" class="button">Explorer nos restaurants</a>
+				<a href="#restaurants" class="button">Explorer nos restaurants</a>
 			</div>
 			<div class="tuto__part2 paddinged">
 				<h2 class="tuto__part2__title">Fonctionnement</h2>
@@ -48,7 +50,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="restaurants paddinged">
+		<section id="restaurants" class="restaurants paddinged">
 			<h1 class="restaurants__title">Restaurants</h1>
 			<div class="restaurants__cards">
 				<a href="./menus/laPaletteDuGout.html" class="restaurant-card restaurant-card--new">

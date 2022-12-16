@@ -1,0 +1,16 @@
+.home-header {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+	.home-header {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: 95%;
+		padding: 0 15px;
+	}
+}
