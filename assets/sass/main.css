@@ -234,11 +234,21 @@ main {
 }
 
 .go-back-button {
-  margin-top: 5px;
-  margin-right: 15px;
+  position: absolute;
+  width: 15px;
+  height: 15px;
   font-size: 1.3em;
+  left: 20px;
+  margin-bottom: 5px;
 }
 
+@media screen and (min-width: 800px) {
+  .go-back-button {
+    position: initial;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
 .menu-card {
   display: flex;
   align-items: center;
