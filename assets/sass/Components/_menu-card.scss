@@ -28,7 +28,12 @@
 	}
 
 	&__order {
+		/*
+		TODO | Faire en sorte que quand le text est trop grand il soit couper
+		TODO | et que la partie qui dépasse soit remplacer par '...'.
+		*/
 		display: flex;
+		justify-content: flex-end;
 		height: 100%;
 		width: 15%;
 
@@ -36,6 +41,7 @@
 			margin-bottom: 12px;
 			align-self: flex-end;
 			font-size: 0.9em;
+			margin-right: 12px;
 			font-weight: bold;
 		}
 
@@ -49,7 +55,6 @@
 			height: 100%;
 			width: 60px; // ? Est ce qu'on laisse la taille fixe ?
 			border-radius: 0 15px 15px 0;
-			margin-left: 12px;
 
 			&:hover {
 				cursor: pointer;

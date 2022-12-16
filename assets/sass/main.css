@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Shrikhand";
   src: url("../../../Shrikhand-Regular.ttf") format("truetype");
@@ -242,7 +243,12 @@ a {
   font-size: 0.85em;
 }
 .menu-card__order {
+  /*
+  TODO | Faire en sorte que quand le text est trop grand il soit couper
+  TODO | et que la partie qui dépasse soit remplacer par '...'.
+  */
   display: flex;
+  justify-content: flex-end;
   height: 100%;
   width: 15%;
 }
@@ -250,6 +256,7 @@ a {
   margin-bottom: 12px;
   align-self: flex-end;
   font-size: 0.9em;
+  margin-right: 12px;
   font-weight: bold;
 }
 .menu-card__order__icon {
@@ -262,7 +269,6 @@ a {
   height: 100%;
   width: 60px;
   border-radius: 0 15px 15px 0;
-  margin-left: 12px;
 }
 .menu-card__order__icon:hover {
   cursor: pointer;
