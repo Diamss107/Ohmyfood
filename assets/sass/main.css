@@ -260,7 +260,10 @@ main {
   box-shadow: 0 5px 6px #d2d2d2;
   background-color: white;
 }
-.menu-card:hover > .menu-card__order > .menu-card__order__icon {
+.menu-card:hover > .menu-card__order > .menu-card__order__label > .menu-card__order__label__icon {
+  display: flex;
+}
+.menu-card:active > .menu-card__order > .menu-card__order__label > .menu-card__order__label__icon {
   display: flex;
 }
 .menu-card:hover > .menu-card__order {
@@ -268,9 +271,14 @@ main {
 }
 .menu-card__text {
   margin: 12px;
-  margin-right: 0;
+  margin-right: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu-card__text__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0;
   font-size: 1em;
 }
@@ -294,7 +302,7 @@ main {
   margin-right: 12px;
   font-weight: bold;
 }
-.menu-card__order__icon {
+.menu-card__order__label__icon {
   display: none;
   align-items: center;
   justify-content: center;
@@ -305,8 +313,17 @@ main {
   width: 60px;
   border-radius: 0 15px 15px 0;
 }
-.menu-card__order__icon:hover {
+.menu-card__order__label__icon:hover {
   cursor: pointer;
+}
+.menu-card__order__radio {
+  display: none;
+}
+.menu-card__order:has(> .menu-card__order__radio:checked) {
+  width: 30%;
+}
+.menu-card__order__radio:checked + .menu-card__order__label > .menu-card__order__label__icon {
+  display: flex;
 }
 
 @media screen and (min-width: 800px) {
