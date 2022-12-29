@@ -1,0 +1,67 @@
+.home-page {
+	transform: scale(0);
+	height: 0;
+	animation: home-page 0ms 3s both;
+}
+
+.loader {
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	margin-top: 50vh;
+	margin-left: 50vw;
+	animation: loader-wrapper 0ms 3s both;
+	&__bar {
+		position: absolute;
+		transform-origin: center;
+		width: 16px;
+		height: 32px;
+		background: $primaryColor;
+		animation: loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+		transform: scaleY(0);
+		&:nth-child(1) {
+			left: 8px;
+			animation-delay: -0.24s;
+		}
+		&:nth-child(2) {
+			left: 32px;
+			animation-delay: -0.12s;
+		}
+		&:nth-child(3) {
+			left: 56px;
+			animation-delay: 0;
+		}
+	}
+}
+@keyframes loader {
+	0% {
+		transform: scaleY(2);
+	}
+	50%,
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+@keyframes loader-wrapper {
+	0% {
+		transform: scale(1) translateX(-35px);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+
+@keyframes home-page {
+	0% {
+		height: 0;
+		transform: scale(0);
+	}
+	100% {
+		width: auto;
+		height: auto;
+		transform: scale(1);
+	}
+}

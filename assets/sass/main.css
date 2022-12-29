@@ -55,6 +55,7 @@ main {
 }
 .button {
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,10 +64,29 @@ main {
   border-radius: 30px;
   margin: 20px;
   box-shadow: 0 3px 12px #d2d2d2;
+  transition: 500ms;
+}
+.button::after {
+  content: "";
+  transition: 500ms;
+  position: absolute;
+  background-color: white;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
 }
 .button:hover {
-  background-image: linear-gradient(to bottom right, #ff83dd, #985ede);
   box-shadow: 0 3px 12px #929292;
+}
+.button:hover::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  opacity: 0.05;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
 }
 
 .tuto-card {
@@ -209,6 +229,7 @@ main {
   margin-right: 15px;
 }
 .heart-icon-regular {
+  transition: 400ms;
   width: 30px;
   height: 30px;
   display: flex;
@@ -216,21 +237,24 @@ main {
   justify-content: center;
 }
 .heart-icon-solid {
+  transition: 400ms;
   width: 30px;
   height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: rgba(0, 0, 0, 0);
-}
-.heart-icon:hover > .heart-icon-regular {
-  display: none;
-}
-.heart-icon:hover > .heart-icon-solid {
-  cursor: pointer;
   background-image: linear-gradient(to top right, #ff79da, #9356dc);
   -webkit-background-clip: text;
           background-clip: text;
+  opacity: 0;
+}
+.heart-icon:hover > .heart-icon-regular {
+  opacity: 0;
+}
+.heart-icon:hover > .heart-icon-solid {
+  cursor: pointer;
+  opacity: 1;
 }
 
 .go-back-button {
@@ -329,6 +353,105 @@ main {
 @media screen and (min-width: 800px) {
   .menu-card {
     width: 100%;
+  }
+}
+.home-page {
+  transform: scale(0);
+  height: 0;
+  -webkit-animation: home-page 0ms 3s both;
+          animation: home-page 0ms 3s both;
+}
+
+.loader {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-top: 50vh;
+  margin-left: 50vw;
+  -webkit-animation: loader-wrapper 0ms 3s both;
+          animation: loader-wrapper 0ms 3s both;
+}
+.loader__bar {
+  position: absolute;
+  transform-origin: center;
+  width: 16px;
+  height: 32px;
+  background: #9356dc;
+  -webkit-animation: loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+          animation: loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  transform: scaleY(0);
+}
+.loader__bar:nth-child(1) {
+  left: 8px;
+  -webkit-animation-delay: -0.24s;
+          animation-delay: -0.24s;
+}
+.loader__bar:nth-child(2) {
+  left: 32px;
+  -webkit-animation-delay: -0.12s;
+          animation-delay: -0.12s;
+}
+.loader__bar:nth-child(3) {
+  left: 56px;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    transform: scaleY(2);
+  }
+  50%, 100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: scaleY(2);
+  }
+  50%, 100% {
+    transform: scaleY(1);
+  }
+}
+@-webkit-keyframes loader-wrapper {
+  0% {
+    transform: scale(1) translateX(-35px);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes loader-wrapper {
+  0% {
+    transform: scale(1) translateX(-35px);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes home-page {
+  0% {
+    height: 0;
+    transform: scale(0);
+  }
+  100% {
+    width: auto;
+    height: auto;
+    transform: scale(1);
+  }
+}
+@keyframes home-page {
+  0% {
+    height: 0;
+    transform: scale(0);
+  }
+  100% {
+    width: auto;
+    height: auto;
+    transform: scale(1);
   }
 }
 .home-header {
