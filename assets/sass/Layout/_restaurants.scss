@@ -14,6 +14,7 @@
 @media screen and (min-width: 800px) {
 	.restaurants {
 		margin-top: 0;
+		background-color: white;
 		&__cards {
 			flex-direction: row;
 			justify-content: space-around;
