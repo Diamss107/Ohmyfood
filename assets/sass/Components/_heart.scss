@@ -3,6 +3,11 @@
 	$size: 30px;
 	@include resizeHeart($size);
 	margin-right: 15px;
+	transition: 100ms;
+
+	&:active {
+		transform: scale(1.2);
+	}
 
 	&-regular {
 		transition: 400ms;
@@ -29,5 +34,16 @@
 	&:hover > &-solid {
 		cursor: pointer;
 		opacity: 1;
+	}
+
+	&__checkbox {
+		display: none;
+	}
+
+	&__checkbox:checked + label > & > &-solid {
+		opacity: 1;
+	}
+	&__checkbox:checked + label > & > &-regular {
+		opacity: 0;
 	}
 }

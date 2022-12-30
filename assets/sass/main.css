@@ -226,6 +226,10 @@ main {
   align-items: center;
   justify-content: center;
   margin-right: 15px;
+  transition: 100ms;
+}
+.heart-icon:active {
+  transform: scale(1.2);
 }
 .heart-icon-regular {
   transition: 400ms;
@@ -254,6 +258,15 @@ main {
 .heart-icon:hover > .heart-icon-solid {
   cursor: pointer;
   opacity: 1;
+}
+.heart-icon__checkbox {
+  display: none;
+}
+.heart-icon__checkbox:checked + label > .heart-icon > .heart-icon-solid {
+  opacity: 1;
+}
+.heart-icon__checkbox:checked + label > .heart-icon > .heart-icon-regular {
+  opacity: 0;
 }
 
 .go-back-button {
@@ -296,10 +309,9 @@ main {
           animation: rotate-icon-hover 450ms ease-in-out 100ms forwards;
 }
 .menu-card:not(:hover) > .menu-card__order > .menu-card__order__label > .menu-card__order__label__icon {
-  opacity: 1;
   transform: rotate(0deg);
-  -webkit-animation: rotate-icon-no-hover 200ms ease-in-out 250ms;
-          animation: rotate-icon-no-hover 200ms ease-in-out 250ms;
+  -webkit-animation: rotate-icon-no-hover 600ms ease-in-out;
+          animation: rotate-icon-no-hover 600ms ease-in-out;
 }
 .menu-card:hover > .menu-card__order {
   width: 30%;
@@ -380,11 +392,17 @@ main {
   }
 }
 @-webkit-keyframes rotate-icon-no-hover {
+  0% {
+    opacity: 1;
+  }
   100% {
     opacity: 0;
   }
 }
 @keyframes rotate-icon-no-hover {
+  0% {
+    opacity: 1;
+  }
   100% {
     opacity: 0;
   }
