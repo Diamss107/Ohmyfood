@@ -8,11 +8,21 @@
 	border-radius: 15px;
 	box-shadow: 0 5px 6px $shadowColor;
 	background-color: white;
-	&:hover > &__order > &__order__label > &__order__label__icon {
-		display: flex;
+	&:hover > &__order > &__order__label,
+	&:active > &__order > &__order__label {
+		animation: menu-select-hover 450ms ease-in-out 100ms forwards;
 	}
-	&:active > &__order > &__order__label > &__order__label__icon {
-		display: flex;
+	&:not(:hover) > &__order > &__order__label {
+		animation: menu-select-no-hover 450ms ease-in-out reverse;
+	}
+	&:hover > &__order > &__order__label > &__order__label__icon {
+		opacity: 1;
+		animation: rotate-icon-hover 450ms ease-in-out 100ms forwards;
+	}
+	&:not(:hover) > &__order > &__order__label > &__order__label__icon {
+		opacity: 1;
+		transform: rotate(0deg);
+		animation: rotate-icon-no-hover 200ms ease-in-out 250ms;
 	}
 	&:hover > &__order {
 		width: 30%;
@@ -38,14 +48,11 @@
 	}
 
 	&__order {
-		/*
-		TODO | Faire en sorte que quand le text est trop grand il soit couper
-		TODO | et que la partie qui dépasse soit remplacer par '...'.
-		*/
 		display: flex;
+		align-items: center;
 		justify-content: flex-end;
 		height: 100%;
-		width: 15%;
+		width: 30%; // ? Temporaire
 
 		&__price {
 			margin-bottom: 12px;
@@ -56,19 +63,22 @@
 		}
 
 		&__label {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: $tertiaryColor;
+			font-size: 1.2em;
+			color: white;
+			height: 65%;
+			width: 0;
+			border-radius: 0;
 			&__icon {
-				display: none;
-				align-items: center;
-				justify-content: center;
-				font-size: 1.2em;
-				color: white;
-				background-color: $tertiaryColor;
-				height: 100%;
-				width: 60px; // ? Est ce qu'on laisse la taille fixe ?
-				border-radius: 0 15px 15px 0;
-				&:hover {
-					cursor: pointer;
-				}
+				opacity: 0;
+				transform: rotate(90deg);
+			}
+
+			&:hover {
+				cursor: pointer;
 			}
 		}
 
@@ -80,9 +90,53 @@
 			width: 30%;
 		}
 
-		&__radio:checked + &__label > &__label__icon {
-			display: flex;
+		&__radio:checked + &__label {
+			width: 60px;
+			border-radius: 0 15px 15px 0;
+			height: 100%;
 		}
+		&__radio:checked + &__label > &__label__icon {
+			opacity: 1;
+			transform: rotate(0deg);
+		}
+	}
+}
+
+@keyframes rotate-icon-hover {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotate-icon-no-hover {
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes menu-select-hover {
+	40% {
+		height: 100%;
+		border-radius: 0 15px 15px 0;
+	}
+
+	100% {
+		width: 60px;
+		border-radius: 0 15px 15px 0;
+		height: 100%;
+	}
+}
+
+@keyframes menu-select-no-hover {
+	40% {
+		height: 100%;
+		border-radius: 0 15px 15px 0;
+	}
+
+	100% {
+		width: 60px;
+		border-radius: 0 15px 15px 0;
+		height: 100%;
 	}
 }
 

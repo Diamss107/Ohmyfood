@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Shrikhand";
   src: url("../../../Shrikhand-Regular.ttf") format("truetype");
@@ -284,11 +283,23 @@ main {
   box-shadow: 0 5px 6px #d2d2d2;
   background-color: white;
 }
-.menu-card:hover > .menu-card__order > .menu-card__order__label > .menu-card__order__label__icon {
-  display: flex;
+.menu-card:hover > .menu-card__order > .menu-card__order__label, .menu-card:active > .menu-card__order > .menu-card__order__label {
+  -webkit-animation: menu-select-hover 450ms ease-in-out 100ms forwards;
+          animation: menu-select-hover 450ms ease-in-out 100ms forwards;
 }
-.menu-card:active > .menu-card__order > .menu-card__order__label > .menu-card__order__label__icon {
-  display: flex;
+.menu-card:not(:hover) > .menu-card__order > .menu-card__order__label {
+  animation: menu-select-no-hover 450ms ease-in-out reverse;
+}
+.menu-card:hover > .menu-card__order > .menu-card__order__label > .menu-card__order__label__icon {
+  opacity: 1;
+  -webkit-animation: rotate-icon-hover 450ms ease-in-out 100ms forwards;
+          animation: rotate-icon-hover 450ms ease-in-out 100ms forwards;
+}
+.menu-card:not(:hover) > .menu-card__order > .menu-card__order__label > .menu-card__order__label__icon {
+  opacity: 1;
+  transform: rotate(0deg);
+  -webkit-animation: rotate-icon-no-hover 200ms ease-in-out 250ms;
+          animation: rotate-icon-no-hover 200ms ease-in-out 250ms;
 }
 .menu-card:hover > .menu-card__order {
   width: 30%;
@@ -310,14 +321,11 @@ main {
   font-size: 0.85em;
 }
 .menu-card__order {
-  /*
-  TODO | Faire en sorte que quand le text est trop grand il soit couper
-  TODO | et que la partie qui dépasse soit remplacer par '...'.
-  */
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   height: 100%;
-  width: 15%;
+  width: 30%;
 }
 .menu-card__order__price {
   margin-bottom: 12px;
@@ -326,18 +334,22 @@ main {
   margin-right: 12px;
   font-weight: bold;
 }
-.menu-card__order__label__icon {
-  display: none;
+.menu-card__order__label {
+  display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #99e2d0;
   font-size: 1.2em;
   color: white;
-  background-color: #99e2d0;
-  height: 100%;
-  width: 60px;
-  border-radius: 0 15px 15px 0;
+  height: 65%;
+  width: 0;
+  border-radius: 0;
 }
-.menu-card__order__label__icon:hover {
+.menu-card__order__label__icon {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+.menu-card__order__label:hover {
   cursor: pointer;
 }
 .menu-card__order__radio {
@@ -346,10 +358,81 @@ main {
 .menu-card__order:has(> .menu-card__order__radio:checked) {
   width: 30%;
 }
+.menu-card__order__radio:checked + .menu-card__order__label {
+  width: 60px;
+  border-radius: 0 15px 15px 0;
+  height: 100%;
+}
 .menu-card__order__radio:checked + .menu-card__order__label > .menu-card__order__label__icon {
-  display: flex;
+  opacity: 1;
+  transform: rotate(0deg);
 }
 
+@-webkit-keyframes rotate-icon-hover {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-icon-hover {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-icon-no-hover {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rotate-icon-no-hover {
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes menu-select-hover {
+  40% {
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+  }
+  100% {
+    width: 60px;
+    border-radius: 0 15px 15px 0;
+    height: 100%;
+  }
+}
+@keyframes menu-select-hover {
+  40% {
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+  }
+  100% {
+    width: 60px;
+    border-radius: 0 15px 15px 0;
+    height: 100%;
+  }
+}
+@-webkit-keyframes menu-select-no-hover {
+  40% {
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+  }
+  100% {
+    width: 60px;
+    border-radius: 0 15px 15px 0;
+    height: 100%;
+  }
+}
+@keyframes menu-select-no-hover {
+  40% {
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+  }
+  100% {
+    width: 60px;
+    border-radius: 0 15px 15px 0;
+    height: 100%;
+  }
+}
 @media screen and (min-width: 800px) {
   .menu-card {
     width: 100%;
