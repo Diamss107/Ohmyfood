@@ -6,6 +6,7 @@
 		$secondaryColor,
 		$primaryColor
 	);
+	border: none;
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -28,6 +29,7 @@
 	}
 
 	&:hover {
+		cursor: pointer;
 		&::after {
 			content: '';
 			position: absolute;

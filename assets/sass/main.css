@@ -54,6 +54,7 @@ main {
 }
 .button {
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  border: none;
   position: relative;
   display: flex;
   align-items: center;
@@ -76,6 +77,7 @@ main {
   border-radius: 30px;
 }
 .button:hover {
+  cursor: pointer;
   box-shadow: 0 3px 12px #929292;
 }
 .button:hover::after {
@@ -754,6 +756,22 @@ main {
   display: flex;
   flex-direction: column;
 }
+.menu-wrapper__menu__section__cards .menu-card {
+  -webkit-animation: showing 800ms ease-in-out 100ms both;
+          animation: showing 800ms ease-in-out 100ms both;
+}
+.menu-wrapper__menu__section__cards :nth-child(2) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+.menu-wrapper__menu__section__cards :nth-child(3) {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+.menu-wrapper__menu__section__cards--4 :nth-child(4) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
 .menu-wrapper__container {
   width: 100%;
   display: flex;
@@ -764,6 +782,25 @@ main {
   padding: 15px 45px;
 }
 
+@-webkit-keyframes showing {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+@keyframes showing {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  40% {
+    opacity: 1;
+  }
+}
 @media screen and (min-width: 800px) {
   .restaurant-img__image {
     width: 100%;
