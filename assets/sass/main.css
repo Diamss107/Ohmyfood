@@ -166,6 +166,7 @@ main {
 }
 .restaurant-card {
   position: relative;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -212,6 +213,7 @@ main {
 @media screen and (min-width: 800px) {
   .restaurant-card {
     width: 45%;
+    height: 250px;
   }
 }
 .heart-icon {
