@@ -224,9 +224,6 @@ main {
   margin-right: 15px;
   transition: 100ms;
 }
-.heart-icon:active {
-  transform: scale(1.2);
-}
 .heart-icon-regular {
   transition: 400ms;
   width: 30px;
@@ -260,6 +257,7 @@ main {
 }
 .heart-icon__checkbox:checked + label > .heart-icon > .heart-icon-solid {
   opacity: 1;
+  transform: scale(1.2);
 }
 .heart-icon__checkbox:checked + label > .heart-icon > .heart-icon-regular {
   opacity: 0;
