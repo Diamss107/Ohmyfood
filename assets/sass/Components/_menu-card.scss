@@ -48,15 +48,18 @@
 	&__order {
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
+		justify-content: flex-start;
+		flex-direction: row-reverse;
 		height: 100%;
 
 		&__price {
-			margin-bottom: 12px;
+			margin-bottom: 5px;
 			align-self: flex-end;
 			font-size: 0.9em;
 			margin-right: 12px;
 			font-weight: bold;
+			color: rgba($color: #000000, $alpha: 1);
+			transition: all ease-in-out 300ms;
 		}
 
 		&__label {
@@ -71,7 +74,6 @@
 			border-radius: 0 15px 15px 0;
 			transition: all $animationDuration ease-in-out;
 			transition-delay: 100ms;
-			overflow: hidden;
 			&__icon {
 				opacity: 0;
 				transition: all $animationDuration ease-in-out;
@@ -91,6 +93,16 @@
 			width: 30%;
 		}
 
+		&__radio:checked + &__label + &__price {
+			font-size: 1em;
+			background-image: linear-gradient(
+				to top right,
+				$secondaryColor,
+				$primaryColor
+			);
+			background-clip: text;
+			color: rgba($color: #000000, $alpha: 0);
+		}
 		&__radio:checked + &__label {
 			width: 60px;
 		}
