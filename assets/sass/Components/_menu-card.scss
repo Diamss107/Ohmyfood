@@ -1,4 +1,6 @@
 .menu-card {
+	$animationDuration: 400ms;
+
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -8,29 +10,26 @@
 	border-radius: 15px;
 	box-shadow: 0 5px 6px $shadowColor;
 	background-color: white;
+	overflow: hidden;
+
 	&:hover > &__order > &__order__label,
 	&:active > &__order > &__order__label {
-		animation: menu-select-hover 450ms ease-in-out 100ms forwards;
-	}
-	&:not(:hover) > &__order > &__order__label {
-		animation: menu-select-no-hover 450ms ease-in-out reverse;
+		width: 60px;
 	}
 	&:hover > &__order > &__order__label > &__order__label__icon {
 		opacity: 1;
-		animation: rotate-icon-hover 450ms ease-in-out 100ms forwards;
-	}
-	&:not(:hover) > &__order > &__order__label > &__order__label__icon {
-		transform: rotate(0deg);
-		animation: rotate-icon-no-hover 600ms ease-in-out;
+		animation: rotate-icon-hover $animationDuration ease-in-out 100ms both;
 	}
 	&:hover > &__order {
 		width: 30%;
+	}
+	&:hover > &__text {
+		width: 65%;
 	}
 
 	&__text {
 		margin: 12px;
 		margin-right: 3px;
-		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
 
@@ -51,7 +50,6 @@
 		align-items: center;
 		justify-content: flex-end;
 		height: 100%;
-		width: 30%; // ? Temporaire
 
 		&__price {
 			margin-bottom: 12px;
@@ -68,12 +66,16 @@
 			background-color: $tertiaryColor;
 			font-size: 1.2em;
 			color: white;
-			height: 65%;
+			height: 100%;
 			width: 0;
-			border-radius: 0;
+			border-radius: 0 15px 15px 0;
+			transition: all $animationDuration ease-in-out;
+			transition-delay: 100ms;
+			overflow: hidden;
 			&__icon {
 				opacity: 0;
-				transform: rotate(90deg);
+				transition: all $animationDuration ease-in-out;
+				transition-delay: 100ms;
 			}
 
 			&:hover {
@@ -91,8 +93,6 @@
 
 		&__radio:checked + &__label {
 			width: 60px;
-			border-radius: 0 15px 15px 0;
-			height: 100%;
 		}
 		&__radio:checked + &__label > &__label__icon {
 			opacity: 1;
@@ -102,47 +102,13 @@
 }
 
 @keyframes rotate-icon-hover {
+	0% {
+		transform: rotate(90deg);
+	}
 	100% {
 		transform: rotate(360deg);
 	}
 }
-
-@keyframes rotate-icon-no-hover {
-	0% {
-		opacity: 1;
-	}
-
-	100% {
-		opacity: 0;
-	}
-}
-
-@keyframes menu-select-hover {
-	40% {
-		height: 100%;
-		border-radius: 0 15px 15px 0;
-	}
-
-	100% {
-		width: 60px;
-		border-radius: 0 15px 15px 0;
-		height: 100%;
-	}
-}
-
-@keyframes menu-select-no-hover {
-	40% {
-		height: 100%;
-		border-radius: 0 15px 15px 0;
-	}
-
-	100% {
-		width: 60px;
-		border-radius: 0 15px 15px 0;
-		height: 100%;
-	}
-}
-
 @media screen and (min-width: 800px) {
 	.menu-card {
 		width: 100%;

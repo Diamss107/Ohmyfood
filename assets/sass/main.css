@@ -1,11 +1,5 @@
-@font-face {
-  font-family: "Shrikhand";
-  src: url("../../../Shrikhand-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("../../../Roboto-Regular.ttf") format("truetype");
-}
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   font-family: "Roboto", "Trebuchet MS";
 }
@@ -297,31 +291,25 @@ main {
   border-radius: 15px;
   box-shadow: 0 5px 6px #d2d2d2;
   background-color: white;
+  overflow: hidden;
 }
 .menu-card:hover > .menu-card__order > .menu-card__order__label, .menu-card:active > .menu-card__order > .menu-card__order__label {
-  -webkit-animation: menu-select-hover 450ms ease-in-out 100ms forwards;
-          animation: menu-select-hover 450ms ease-in-out 100ms forwards;
-}
-.menu-card:not(:hover) > .menu-card__order > .menu-card__order__label {
-  animation: menu-select-no-hover 450ms ease-in-out reverse;
+  width: 60px;
 }
 .menu-card:hover > .menu-card__order > .menu-card__order__label > .menu-card__order__label__icon {
   opacity: 1;
-  -webkit-animation: rotate-icon-hover 450ms ease-in-out 100ms forwards;
-          animation: rotate-icon-hover 450ms ease-in-out 100ms forwards;
-}
-.menu-card:not(:hover) > .menu-card__order > .menu-card__order__label > .menu-card__order__label__icon {
-  transform: rotate(0deg);
-  -webkit-animation: rotate-icon-no-hover 600ms ease-in-out;
-          animation: rotate-icon-no-hover 600ms ease-in-out;
+  -webkit-animation: rotate-icon-hover 400ms ease-in-out 100ms both;
+          animation: rotate-icon-hover 400ms ease-in-out 100ms both;
 }
 .menu-card:hover > .menu-card__order {
   width: 30%;
 }
+.menu-card:hover > .menu-card__text {
+  width: 65%;
+}
 .menu-card__text {
   margin: 12px;
   margin-right: 3px;
-  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -339,7 +327,6 @@ main {
   align-items: center;
   justify-content: flex-end;
   height: 100%;
-  width: 30%;
 }
 .menu-card__order__price {
   margin-bottom: 12px;
@@ -355,13 +342,17 @@ main {
   background-color: #99e2d0;
   font-size: 1.2em;
   color: white;
-  height: 65%;
+  height: 100%;
   width: 0;
-  border-radius: 0;
+  border-radius: 0 15px 15px 0;
+  transition: all 400ms ease-in-out;
+  transition-delay: 100ms;
+  overflow: hidden;
 }
 .menu-card__order__label__icon {
   opacity: 0;
-  transform: rotate(90deg);
+  transition: all 400ms ease-in-out;
+  transition-delay: 100ms;
 }
 .menu-card__order__label:hover {
   cursor: pointer;
@@ -374,8 +365,6 @@ main {
 }
 .menu-card__order__radio:checked + .menu-card__order__label {
   width: 60px;
-  border-radius: 0 15px 15px 0;
-  height: 100%;
 }
 .menu-card__order__radio:checked + .menu-card__order__label > .menu-card__order__label__icon {
   opacity: 1;
@@ -383,74 +372,20 @@ main {
 }
 
 @-webkit-keyframes rotate-icon-hover {
+  0% {
+    transform: rotate(90deg);
+  }
   100% {
     transform: rotate(360deg);
   }
 }
 
 @keyframes rotate-icon-hover {
+  0% {
+    transform: rotate(90deg);
+  }
   100% {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes rotate-icon-no-hover {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes rotate-icon-no-hover {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes menu-select-hover {
-  40% {
-    height: 100%;
-    border-radius: 0 15px 15px 0;
-  }
-  100% {
-    width: 60px;
-    border-radius: 0 15px 15px 0;
-    height: 100%;
-  }
-}
-@keyframes menu-select-hover {
-  40% {
-    height: 100%;
-    border-radius: 0 15px 15px 0;
-  }
-  100% {
-    width: 60px;
-    border-radius: 0 15px 15px 0;
-    height: 100%;
-  }
-}
-@-webkit-keyframes menu-select-no-hover {
-  40% {
-    height: 100%;
-    border-radius: 0 15px 15px 0;
-  }
-  100% {
-    width: 60px;
-    border-radius: 0 15px 15px 0;
-    height: 100%;
-  }
-}
-@keyframes menu-select-no-hover {
-  40% {
-    height: 100%;
-    border-radius: 0 15px 15px 0;
-  }
-  100% {
-    width: 60px;
-    border-radius: 0 15px 15px 0;
-    height: 100%;
   }
 }
 @media screen and (min-width: 800px) {
