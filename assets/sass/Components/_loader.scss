@@ -10,18 +10,21 @@
 	align-items: center;
 	justify-content: center;
 	position: absolute;
-	margin-top: 50vh;
-	margin-left: 50vw;
+	width: 100%;
+	max-width: 1440px;
+	height: 100%;
 	animation: loader-wrapper 0ms 3s both;
+
 	&__bar {
-		position: absolute;
 		transform-origin: center;
 		width: 16px;
 		height: 32px;
+		margin-left: 6px;
 		background: $primaryColor;
 		animation: loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 		transform: scaleY(0);
 		&:nth-child(1) {
+			margin-left: 0;
 			left: 8px;
 			animation-delay: -0.24s;
 		}
@@ -47,7 +50,7 @@
 
 @keyframes loader-wrapper {
 	0% {
-		transform: scale(1) translateX(-35px);
+		transform: scale(1);
 	}
 	100% {
 		transform: scale(0);
