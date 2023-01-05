@@ -23,15 +23,6 @@
 		opacity: 0;
 	}
 
-	&:hover > &-regular {
-		opacity: 0;
-	}
-
-	&:hover > &-solid {
-		cursor: pointer;
-		opacity: 1;
-	}
-
 	&__checkbox {
 		display: none;
 	}
@@ -40,7 +31,17 @@
 		opacity: 1;
 		transform: scale(1.2);
 	}
-	&__checkbox:checked + label > & > &-regular {
-		opacity: 0;
+}
+
+@media screen and (min-width: 800px) {
+	.heart-icon {
+		&:hover > &-regular {
+			opacity: 0;
+		}
+
+		&:hover > &-solid {
+			cursor: pointer;
+			opacity: 1;
+		}
 	}
 }
