@@ -1,5 +1,6 @@
 .menu-card {
 	$animationDuration: 400ms;
+	$translateTarget: 5px;
 
 	display: flex;
 	align-items: center;
@@ -17,30 +18,49 @@
 		width: 60px;
 	}
 	&:hover > &__order > &__order__label > &__order__label__icon {
-		opacity: 1;
 		animation: rotate-icon-hover $animationDuration ease-in-out 100ms both;
 	}
-	&:hover > &__order {
-		width: 30%;
+
+	&__radio {
+		display: none;
 	}
-	&:hover > &__text {
-		width: 65%;
+
+	&__radio:checked + &__text + &__order > &__order__label {
+		width: 60px;
+	}
+
+	&__radio:checked + &__text + &__order > &__order__price {
+		font-size: 1em;
+		background-image: linear-gradient(
+			to top right,
+			$secondaryColor,
+			$primaryColor
+		);
+		background-clip: text;
+		color: rgba($color: #000000, $alpha: 0);
 	}
 
 	&__text {
+		display: flex;
+		flex-direction: column;
 		margin: 12px;
-		margin-right: 3px;
+		margin-right: unset;
 		white-space: nowrap;
+		overflow: hidden;
 		text-overflow: ellipsis;
 
 		&__title {
-			overflow: hidden;
-			text-overflow: ellipsis;
+			display: inline;
+			overflow: inherit;
+			text-overflow: inherit;
 			margin: 0;
 			font-size: 1em;
 		}
 
 		&__desc {
+			display: inline;
+			overflow: inherit;
+			text-overflow: ellipsis;
 			font-size: 0.85em;
 		}
 	}
@@ -48,9 +68,9 @@
 	&__order {
 		display: flex;
 		align-items: center;
-		justify-content: flex-start;
-		flex-direction: row-reverse;
+		justify-content: flex-end;
 		height: 100%;
+		transition: all $animationDuration ease-in-out;
 
 		&__price {
 			margin-bottom: 5px;
@@ -70,12 +90,10 @@
 			font-size: 1.2em;
 			color: white;
 			height: 100%;
-			width: 0;
-			border-radius: 0 15px 15px 0;
+			width: 0px;
 			transition: all $animationDuration ease-in-out;
 			transition-delay: 100ms;
 			&__icon {
-				opacity: 0;
 				transition: all $animationDuration ease-in-out;
 				transition-delay: 100ms;
 			}
@@ -83,32 +101,6 @@
 			&:hover {
 				cursor: pointer;
 			}
-		}
-
-		&__radio {
-			display: none;
-		}
-
-		&:has(> &__radio:checked) {
-			width: 30%;
-		}
-
-		&__radio:checked + &__label + &__price {
-			font-size: 1em;
-			background-image: linear-gradient(
-				to top right,
-				$secondaryColor,
-				$primaryColor
-			);
-			background-clip: text;
-			color: rgba($color: #000000, $alpha: 0);
-		}
-		&__radio:checked + &__label {
-			width: 60px;
-		}
-		&__radio:checked + &__label > &__label__icon {
-			opacity: 1;
-			transform: rotate(0deg);
 		}
 	}
 }
@@ -121,6 +113,7 @@
 		transform: rotate(360deg);
 	}
 }
+
 @media screen and (min-width: 800px) {
 	.menu-card {
 		width: 100%;

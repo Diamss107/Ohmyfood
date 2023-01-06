@@ -9,7 +9,8 @@
 	width: 95%;
 	margin: 10px 0 15px 10px;
 	height: 70px;
-	&--hightlighting {
+	transition: 300ms;
+	&:hover {
 		> #{$p}__body {
 			background-color: #f5edff;
 		}
@@ -31,11 +32,13 @@
 		height: 100%;
 		box-shadow: 0 5px 6px rgb(210, 210, 210);
 		font-weight: bold;
+		transition: inherit;
 
 		&__icon {
 			color: #7e7e7e;
 			font-size: 1.2em;
 			margin: 0 20px 0 30px;
+			transition: inherit;
 		}
 	}
 }

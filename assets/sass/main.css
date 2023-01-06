@@ -92,11 +92,12 @@ main {
   width: 95%;
   margin: 10px 0 15px 10px;
   height: 70px;
+  transition: 300ms;
 }
-.tuto-card--hightlighting > .tuto-card__body {
+.tuto-card:hover > .tuto-card__body {
   background-color: #f5edff;
 }
-.tuto-card--hightlighting .tuto-card__body__icon {
+.tuto-card:hover .tuto-card__body__icon {
   color: #9356dc;
 }
 .tuto-card:nth-child(1)::before {
@@ -152,11 +153,13 @@ main {
   height: 100%;
   box-shadow: 0 5px 6px rgb(210, 210, 210);
   font-weight: bold;
+  transition: inherit;
 }
 .tuto-card__body__icon {
   color: #7e7e7e;
   font-size: 1.2em;
   margin: 0 20px 0 30px;
+  transition: inherit;
 }
 
 @media screen and (min-width: 800px) {
@@ -224,7 +227,7 @@ main {
   align-items: center;
   justify-content: center;
   margin-right: 15px;
-  transition: 100ms;
+  transition: 300ms;
 }
 .heart-icon-regular {
   transition: 400ms;
@@ -235,26 +238,42 @@ main {
   justify-content: center;
 }
 .heart-icon-solid {
-  transition: 400ms;
   width: 30px;
   height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(0, 0, 0, 0);
-  background-image: linear-gradient(to top right, #ff79da, #9356dc);
-  -webkit-background-clip: text;
-          background-clip: text;
   opacity: 0;
+  transition: 400ms;
 }
 .heart-icon__checkbox {
   display: none;
 }
 .heart-icon__checkbox:checked + label > .heart-icon > .heart-icon-solid {
+  background-image: linear-gradient(to top right, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: rgba(0, 0, 0, 0);
   opacity: 1;
+  transform: scale(1.25);
+}
+.heart-icon__checkbox:checked + label > .heart-icon > .heart-icon-regular {
   transform: scale(1.2);
+  -webkit-animation: optacity-0 0s linear 400ms 1 alternate forwards;
+          animation: optacity-0 0s linear 400ms 1 alternate forwards;
 }
 
+@-webkit-keyframes optacity-0 {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes optacity-0 {
+  100% {
+    opacity: 0;
+  }
+}
 @media screen and (min-width: 800px) {
   .heart-icon:hover > .heart-icon-regular {
     opacity: 0;
@@ -296,37 +315,50 @@ main {
   width: 60px;
 }
 .menu-card:hover > .menu-card__order > .menu-card__order__label > .menu-card__order__label__icon {
-  opacity: 1;
   -webkit-animation: rotate-icon-hover 400ms ease-in-out 100ms both;
           animation: rotate-icon-hover 400ms ease-in-out 100ms both;
 }
-.menu-card:hover > .menu-card__order {
-  width: 30%;
+.menu-card__radio {
+  display: none;
 }
-.menu-card:hover > .menu-card__text {
-  width: 65%;
+.menu-card__radio:checked + .menu-card__text + .menu-card__order > .menu-card__order__label {
+  width: 60px;
+}
+.menu-card__radio:checked + .menu-card__text + .menu-card__order > .menu-card__order__price {
+  font-size: 1em;
+  background-image: linear-gradient(to top right, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: rgba(0, 0, 0, 0);
 }
 .menu-card__text {
+  display: flex;
+  flex-direction: column;
   margin: 12px;
-  margin-right: 3px;
+  margin-right: unset;
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu-card__text__title {
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: inline;
+  overflow: inherit;
+  text-overflow: inherit;
   margin: 0;
   font-size: 1em;
 }
 .menu-card__text__desc {
+  display: inline;
+  overflow: inherit;
+  text-overflow: ellipsis;
   font-size: 0.85em;
 }
 .menu-card__order {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  flex-direction: row-reverse;
+  justify-content: flex-end;
   height: 100%;
+  transition: all 400ms ease-in-out;
 }
 .menu-card__order__price {
   margin-bottom: 5px;
@@ -345,38 +377,16 @@ main {
   font-size: 1.2em;
   color: white;
   height: 100%;
-  width: 0;
-  border-radius: 0 15px 15px 0;
+  width: 0px;
   transition: all 400ms ease-in-out;
   transition-delay: 100ms;
 }
 .menu-card__order__label__icon {
-  opacity: 0;
   transition: all 400ms ease-in-out;
   transition-delay: 100ms;
 }
 .menu-card__order__label:hover {
   cursor: pointer;
-}
-.menu-card__order__radio {
-  display: none;
-}
-.menu-card__order:has(> .menu-card__order__radio:checked) {
-  width: 30%;
-}
-.menu-card__order__radio:checked + .menu-card__order__label + .menu-card__order__price {
-  font-size: 1em;
-  background-image: linear-gradient(to top right, #ff79da, #9356dc);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: rgba(0, 0, 0, 0);
-}
-.menu-card__order__radio:checked + .menu-card__order__label {
-  width: 60px;
-}
-.menu-card__order__radio:checked + .menu-card__order__label > .menu-card__order__label__icon {
-  opacity: 1;
-  transform: rotate(0deg);
 }
 
 @-webkit-keyframes rotate-icon-hover {
