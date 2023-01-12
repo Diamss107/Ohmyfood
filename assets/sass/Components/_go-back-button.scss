@@ -1,15 +1,18 @@
 .go-back-button {
-	position: absolute; // ! ALERTE
-	width: 15px;
-	height: 15px;
+	$size: 15px;
+
+	position: absolute;
+	width: $size;
+	height: $size;
 	font-size: 1.3em;
 	left: 20px;
 	margin-bottom: 5px;
 }
 @media screen and (min-width: 800px) {
 	.go-back-button {
+		$rightAndLeftMargin: 20px;
 		position: initial;
-		margin-left: 20px;
-		margin-right: 20px;
+		margin-left: $rightAndLeftMargin;
+		margin-right: $rightAndLeftMargin;
 	}
 }

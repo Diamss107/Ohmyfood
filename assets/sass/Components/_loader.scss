@@ -5,17 +5,21 @@
 }
 
 .loader {
+	$size: 100%;
+
 	z-index: 10;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	position: absolute;
-	width: 100%;
+	width: $size;
+	height: $size;
 	max-width: 1440px;
-	height: 100%;
 	animation: loader-wrapper 0ms 3s both;
 
 	&__bar {
+		$animationDelay: -120ms;
+
 		transform-origin: center;
 		width: 16px;
 		height: 32px;
@@ -26,11 +30,11 @@
 		&:nth-child(1) {
 			margin-left: 0;
 			left: 8px;
-			animation-delay: -0.24s;
+			animation-delay: $animationDelay * 2;
 		}
 		&:nth-child(2) {
 			left: 32px;
-			animation-delay: -0.12s;
+			animation-delay: $animationDelay;
 		}
 		&:nth-child(3) {
 			left: 56px;

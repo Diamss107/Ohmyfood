@@ -1,10 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-* {
-  font-family: "Roboto", "Trebuchet MS";
-}
-
 body {
+  font-family: "Roboto", "Trebuchet MS";
   margin: 0;
   padding: 0;
   max-width: 1440px;
@@ -29,7 +26,7 @@ main {
   justify-content: center;
   align-items: center;
   height: 50px;
-  background-color: #eaeaea;
+  background-color: #e3e3e3;
 }
 .current-location__icon {
   color: #353535;
@@ -75,13 +72,7 @@ main {
   box-shadow: 0 3px 12px #929292;
 }
 .button:hover::after {
-  content: "";
-  position: absolute;
-  background-color: white;
   opacity: 0.05;
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
 }
 
 .tuto-card {
@@ -95,9 +86,9 @@ main {
   transition: 300ms;
 }
 .tuto-card:hover > .tuto-card__body {
-  background-color: #f5edff;
+  background-color: #f5f0fc;
 }
-.tuto-card:hover .tuto-card__body__icon {
+.tuto-card:hover > .tuto-card__body > .tuto-card__body__icon {
   color: #9356dc;
 }
 .tuto-card:nth-child(1)::before {
@@ -111,7 +102,7 @@ main {
   color: white;
   font-size: 0.8em;
   width: 27px;
-  height: 25px;
+  height: 27px;
   border-radius: 1000px;
   z-index: 2;
 }
@@ -126,7 +117,7 @@ main {
   color: white;
   font-size: 0.8em;
   width: 27px;
-  height: 25px;
+  height: 27px;
   border-radius: 1000px;
   z-index: 2;
 }
@@ -141,7 +132,7 @@ main {
   color: white;
   font-size: 0.8em;
   width: 27px;
-  height: 25px;
+  height: 27px;
   border-radius: 1000px;
   z-index: 2;
 }
@@ -151,7 +142,7 @@ main {
   border-radius: 20px;
   width: 100%;
   height: 100%;
-  box-shadow: 0 5px 6px rgb(210, 210, 210);
+  box-shadow: 0 5px 6px #d2d2d2;
   font-weight: bold;
   transition: inherit;
 }
@@ -190,7 +181,7 @@ main {
   right: 15px;
   top: 15px;
   background-color: #99e2d0;
-  color: #239c7e;
+  color: #2b977c;
   padding: 5px 10px;
   font-size: 0.8em;
   border-radius: 2px;
@@ -230,7 +221,7 @@ main {
   transition: 300ms;
 }
 .heart-icon-regular {
-  transition: 400ms;
+  transition: 300ms;
   width: 30px;
   height: 30px;
   display: flex;
@@ -244,7 +235,7 @@ main {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: 400ms;
+  transition: 300ms;
 }
 .heart-icon__checkbox {
   display: none;
@@ -259,8 +250,8 @@ main {
 }
 .heart-icon__checkbox:checked + label > .heart-icon > .heart-icon-regular {
   transform: scale(1.2);
-  -webkit-animation: optacity-0 0s linear 400ms 1 alternate forwards;
-          animation: optacity-0 0s linear 400ms 1 alternate forwards;
+  -webkit-animation: optacity-0 0s linear 300ms 1 alternate forwards;
+          animation: optacity-0 0s linear 300ms 1 alternate forwards;
 }
 
 @-webkit-keyframes optacity-0 {
@@ -275,12 +266,17 @@ main {
   }
 }
 @media screen and (min-width: 800px) {
-  .heart-icon:hover > .heart-icon-regular {
-    opacity: 0;
-  }
   .heart-icon:hover > .heart-icon-solid {
     cursor: pointer;
+    background-image: linear-gradient(to top right, #ff79da, #9356dc);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: rgba(0, 0, 0, 0);
     opacity: 1;
+  }
+  .heart-icon:hover > .heart-icon-regular {
+    -webkit-animation: optacity-0 0s linear 300ms 1 alternate forwards;
+            animation: optacity-0 0s linear 300ms 1 alternate forwards;
   }
 }
 .go-back-button {
@@ -330,6 +326,7 @@ main {
   -webkit-background-clip: text;
           background-clip: text;
   color: rgba(0, 0, 0, 0);
+  opacity: 1;
 }
 .menu-card__text {
   display: flex;
@@ -425,8 +422,8 @@ main {
   justify-content: center;
   position: absolute;
   width: 100%;
-  max-width: 1440px;
   height: 100%;
+  max-width: 1440px;
   -webkit-animation: loader-wrapper 0ms 3s both;
           animation: loader-wrapper 0ms 3s both;
 }
@@ -443,13 +440,13 @@ main {
 .loader__bar:nth-child(1) {
   margin-left: 0;
   left: 8px;
-  -webkit-animation-delay: -0.24s;
-          animation-delay: -0.24s;
+  -webkit-animation-delay: -240ms;
+          animation-delay: -240ms;
 }
 .loader__bar:nth-child(2) {
   left: 32px;
-  -webkit-animation-delay: -0.12s;
-          animation-delay: -0.12s;
+  -webkit-animation-delay: -120ms;
+          animation-delay: -120ms;
 }
 .loader__bar:nth-child(3) {
   left: 56px;
@@ -534,7 +531,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 6px grey;
+  box-shadow: 0 0 6px #9f9f9f;
   height: 65px;
   background-color: white;
 }
@@ -567,9 +564,6 @@ main {
 .tuto__part1__title {
   width: 80%;
   margin: 30px 0 0 0;
-}
-.tuto__part1__text {
-  font-weight: 500;
 }
 .tuto__part2 {
   display: flex;
