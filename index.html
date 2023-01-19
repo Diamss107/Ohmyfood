@@ -2,10 +2,10 @@
 <html lang="fr">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://kit.fontawesome.com/4db20b3dcb.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="./assets/sass/main.css" />
+	<link rel="stylesheet" href="./assets/sass/main.css">
 	<title>Ohmyfood!</title>
 </head>
 
@@ -16,7 +16,7 @@
 		<div class="loader__bar"></div>
 	</div>
 	<div class="home-page">
-		<section class="home-header">
+		<div class="home-header">
 			<header class="header">
 				<span class="header__logo">ohmyfood</span>
 			</header>
@@ -24,7 +24,7 @@
 				<i class="fa-solid fa-location-dot current-location__icon"></i>
 				<span class="current-location__text">Paris, Belleville</span>
 			</div>
-		</section>
+		</div>
 		<main>
 			<section class="tuto">
 				<div class="tuto__part1 paddinged">
@@ -59,85 +59,85 @@
 			<section id="restaurants" class="restaurants paddinged">
 				<h1 class="restaurants__title">Restaurants</h1>
 				<div class="restaurants__cards">
-					<a href="./menus/la-palette-du-gout.html" class="restaurant-card restaurant-card--new">
-						<img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-							alt="la pallette du gout" class="restaurant-card__img" />
-						<div class="restaurant-card__infos">
-							<div class="restaurant-card__infos__text">
-								<h3 class="restaurant-card__infos__text__title">
+					<div class="restaurant-card restaurant-card--new">
+						<a href="./menus/la-palette-du-gout.html" class="restaurant-card__body">
+							<img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+								alt="la pallette du gout" class="restaurant-card__body__img">
+							<div class="restaurant-card__body__text">
+								<h3 class="restaurant-card__body__text__title">
 									La palette du goût
 								</h3>
-								<span class="restaurant-card__infos__text__localization">Ménilmontant</span>
+								<span class="restaurant-card__body__text__localization">Ménilmontant</span>
 							</div>
-							<input type="checkbox" name="heart" id="La palette du goût" class="heart-icon__checkbox" />
-							<label for="La palette du goût">
-								<span class="fa-stack fa-1x heart-icon">
-									<i class="fa-regular fa-heart fa-stack-1x heart-icon-regular"></i>
-									<i class="fa-solid fa-heart fa-stack-1x heart-icon-solid"></i>
-								</span>
-							</label>
-						</div>
-					</a>
+						</a>
+						<input type="checkbox" name="heart" id="laPaletteDuGout" class="heart-icon__checkbox">
+						<label for="laPaletteDuGout">
+							<span class="fa-stack fa-1x heart-icon">
+								<i class="fa-regular fa-heart fa-stack-1x heart-icon-regular"></i>
+								<i class="fa-solid fa-heart fa-stack-1x heart-icon-solid"></i>
+							</span>
+						</label>
+					</div>
 
-					<a href="./menus/la-note-enchantee.html" class="restaurant-card restaurant-card--new">
-						<img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="la note enchantee"
-							class="restaurant-card__img" />
-						<div class="restaurant-card__infos">
-							<div class="restaurant-card__infos__text">
-								<h3 class="restaurant-card__infos__text__title">
+					<div class="restaurant-card restaurant-card--new">
+						<a href="./menus/la-note-enchantee.html" class="restaurant-card restaurant-card__body">
+							<img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="la note enchantee"
+								class="restaurant-card__body__img">
+							<div class="restaurant-card__body__text">
+								<h3 class="restaurant-card__body__text__title">
 									La note enchantée
 								</h3>
-								<span class="restaurant-card__infos__text__localization">Charonne</span>
+								<span class="restaurant-card__body__text__localization">Charonne</span>
 							</div>
-							<input type="checkbox" name="heart" id="La note enchantée" class="heart-icon__checkbox" />
-							<label for="La note enchantée">
-								<span class="fa-stack fa-1x heart-icon">
-									<i class="fa-regular fa-heart fa-stack-1x heart-icon-regular"></i>
-									<i class="fa-solid fa-heart fa-stack-1x heart-icon-solid"></i>
-								</span>
-							</label>
-						</div>
-					</a>
+						</a>
+						<input type="checkbox" name="heart" id="LaNoteEnchantee" class="heart-icon__checkbox">
+						<label for="LaNoteEnchantee">
+							<span class="fa-stack fa-1x heart-icon">
+								<i class="fa-regular fa-heart fa-stack-1x heart-icon-regular"></i>
+								<i class="fa-solid fa-heart fa-stack-1x heart-icon-solid"></i>
+							</span>
+						</label>
+					</div>
 
-					<a href="./menus/a-la-francaise.html" class="restaurant-card">
-						<img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="a la francaise"
-							class="restaurant-card__img" />
-						<div class="restaurant-card__infos">
-							<div class="restaurant-card__infos__text">
-								<h3 class="restaurant-card__infos__text__title">
+					<div class="restaurant-card">
+						<a href="./menus/a-la-francaise.html" class="restaurant-card__body">
+							<img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+								alt="a la francaise" class="restaurant-card__body__img">
+							<div class="restaurant-card__body__text">
+								<h3 class="restaurant-card__body__text__title">
 									À la française
 								</h3>
-								<span class="restaurant-card__infos__text__localization">Cité Rouge</span>
+								<span class="restaurant-card__body__text__localization">Cité Rouge</span>
 							</div>
-							<input type="checkbox" name="heart" id="À la française" class="heart-icon__checkbox" />
-							<label for="À la française">
-								<span class="fa-stack fa-1x heart-icon">
-									<i class="fa-regular fa-heart fa-stack-1x heart-icon-regular"></i>
-									<i class="fa-solid fa-heart fa-stack-1x heart-icon-solid"></i>
-								</span>
-							</label>
-						</div>
-					</a>
+						</a>
+						<input type="checkbox" name="heart" id="aLaFrançaise" class="heart-icon__checkbox">
+						<label for="aLaFrançaise">
+							<span class="fa-stack fa-1x heart-icon">
+								<i class="fa-regular fa-heart fa-stack-1x heart-icon-regular"></i>
+								<i class="fa-solid fa-heart fa-stack-1x heart-icon-solid"></i>
+							</span>
+						</label>
+					</div>
 
-					<a href="./menus/le-delice-des-sens.html" class="restaurant-card">
-						<img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-							alt="le delice des sens" class="restaurant-card__img" />
-						<div class="restaurant-card__infos">
-							<div class="restaurant-card__infos__text">
-								<h3 class="restaurant-card__infos__text__title">
+					<div class="restaurant-card">
+						<a href="./menus/le-delice-des-sens.html" class="restaurant-card__body">
+							<img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+								alt="le delice des sens" class="restaurant-card__body__img">
+							<div class="restaurant-card__body__text">
+								<h3 class="restaurant-card__body__text__title">
 									Le délice des sens
 								</h3>
-								<span class="restaurant-card__infos__text__localization">Folie-Méricourt</span>
+								<span class="restaurant-card__body__text__localization">Folie-Méricourt</span>
 							</div>
-							<input type="checkbox" name="heart" id="Le délice des sens" class="heart-icon__checkbox" />
-							<label for="Le délice des sens">
-								<span class="fa-stack fa-1x heart-icon">
-									<i class="fa-regular fa-heart fa-stack-1x heart-icon-regular"></i>
-									<i class="fa-solid fa-heart fa-stack-1x heart-icon-solid"></i>
-								</span>
-							</label>
-						</div>
-					</a>
+						</a>
+						<input type="checkbox" name="heart" id="leDeliceDesSens" class="heart-icon__checkbox">
+						<label for="leDeliceDesSens">
+							<span class="fa-stack fa-1x heart-icon">
+								<i class="fa-regular fa-heart fa-stack-1x heart-icon-regular"></i>
+								<i class="fa-solid fa-heart fa-stack-1x heart-icon-solid"></i>
+							</span>
+						</label>
+					</div>
 				</div>
 			</section>
 		</main>

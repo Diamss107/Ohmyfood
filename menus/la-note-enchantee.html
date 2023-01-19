@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/4db20b3dcb.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="../assets/sass/main.css" />
+	<link rel="stylesheet" href="../assets/sass/main.css">
 	<title>Menu de La note enchantée - Ohmyfood!</title>
 </head>
 
@@ -19,175 +19,177 @@
 	</header>
 	<div class="restaurant-img">
 		<img class="restaurant-img__image" src="../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-			alt="La note enchantée" />
+			alt="La note enchantée">
 	</div>
 	<section class="menu-wrapper">
-		<div class="menu-wrapper__header">
-			<h1 class="menu-wrapper__header__title">La note enchantée</h1>
-			<input type="checkbox" name="heart" id="heart" class="heart-icon__checkbox" />
-			<label for="heart">
-				<span class="fa-stack fa-1x heart-icon">
-					<i class="fa-regular fa-heart fa-stack-1x heart-icon-regular"></i>
-					<i class="fa-solid fa-heart fa-stack-1x heart-icon-solid"></i>
-				</span>
-			</label>
-		</div>
-		<div class="menu-wrapper__menu paddinged">
-			<div class="menu-wrapper__menu__section">
-				<h2 class="menu-wrapper__menu__section__title">
-					<span class="menu-wrapper__menu__section__title__underline">Entr</span>ées
-				</h2>
-				<div class="menu-wrapper__menu__section__cards menu-wrapper__menu__section__cards--4">
-					<div class="menu-card">
-						<input required type="radio" name="appetizer" id="1" class="menu-card__radio">
-						<div class="menu-card__text">
-							<h3 class="menu-card__text__title">Ravioles de foie gras</h3>
-							<span class="menu-card__text__desc">Accompagnés de leur crème à la truffe</span>
+		<form method="post" action="#">
+			<div class="menu-wrapper__header">
+				<h1 class="menu-wrapper__header__title">La note enchantée</h1>
+				<input type="checkbox" name="heart" id="heart" class="heart-icon__checkbox">
+				<label for="heart">
+					<span class="fa-stack fa-1x heart-icon">
+						<i class="fa-regular fa-heart fa-stack-1x heart-icon-regular"></i>
+						<i class="fa-solid fa-heart fa-stack-1x heart-icon-solid"></i>
+					</span>
+				</label>
+			</div>
+			<div class="menu-wrapper__menu paddinged">
+				<div class="menu-wrapper__menu__section">
+					<h2 class="menu-wrapper__menu__section__title">
+						<span class="menu-wrapper__menu__section__title__underline">Entr</span>ées
+					</h2>
+					<div class="menu-wrapper__menu__section__cards menu-wrapper__menu__section__cards--4">
+						<div class="menu-card">
+							<input required type="radio" name="appetizer" id="1" class="menu-card__radio">
+							<div class="menu-card__text">
+								<h3 class="menu-card__text__title">Ravioles de foie gras</h3>
+								<span class="menu-card__text__desc">Accompagnés de leur crème à la truffe</span>
+							</div>
+							<div class="menu-card__order">
+								<span class="menu-card__order__price">25€</span>
+								<label for="1" class="menu-card__order__label">
+									<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
+								</label>
+							</div>
 						</div>
-						<div class="menu-card__order">
-							<span class="menu-card__order__price">25€</span>
-							<label for="1" class="menu-card__order__label">
-								<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
-							</label>
+						<div class="menu-card">
+							<input required type="radio" name="appetizer" id="2" class="menu-card__radio">
+							<div class="menu-card__text">
+								<h3 class="menu-card__text__title">Caviar osciètre</h3>
+								<span class="menu-card__text__desc">Sur blini à la farine de blé noir</span>
+							</div>
+							<div class="menu-card__order">
+								<span class="menu-card__order__price">35€</span>
+								<label for="2" class="menu-card__order__label">
+									<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
+								</label>
+							</div>
+						</div>
+						<div class="menu-card">
+							<input required type="radio" name="appetizer" id="3" class="menu-card__radio">
+							<div class="menu-card__text">
+								<h3 class="menu-card__text__title">Homard et espuma de potiron</h3>
+								<span class="menu-card__text__desc">Mariné aux zestes d'orange</span>
+							</div>
+							<div class="menu-card__order">
+								<span class="menu-card__order__price">20€</span>
+								<label for="3" class="menu-card__order__label">
+									<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
+								</label>
+							</div>
+						</div>
+						<div class="menu-card">
+							<input required type="radio" name="appetizer" id="3b" class="menu-card__radio">
+							<div class="menu-card__text">
+								<h3 class="menu-card__text__title">Foie gras de canard cuit entier</h3>
+								<span class="menu-card__text__desc">Confiture de figue et pain toasté</span>
+							</div>
+							<div class="menu-card__order">
+								<span class="menu-card__order__price">35€</span>
+								<label for="3b" class="menu-card__order__label">
+									<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
+								</label>
+							</div>
 						</div>
 					</div>
-					<div class="menu-card">
-						<input required type="radio" name="appetizer" id="2" class="menu-card__radio">
-						<div class="menu-card__text">
-							<h3 class="menu-card__text__title">Caviar osciètre</h3>
-							<span class="menu-card__text__desc">Sur blini à la farine de blé noir</span>
+				</div>
+				<div class="menu-wrapper__menu__section">
+					<h2 class="menu-wrapper__menu__section__title">
+						<span class="menu-wrapper__menu__section__title__underline">Plat</span>s
+					</h2>
+					<div class="menu-wrapper__menu__section__cards">
+						<div class="menu-card">
+							<input required type="radio" name="dishes" id="4" class="menu-card__radio">
+							<div class="menu-card__text">
+								<h3 class="menu-card__text__title">Noix de coquilles Saint-Jacques</h3>
+								<span class="menu-card__text__desc">Sur lit de purée de céleri-rave</span>
+							</div>
+							<div class="menu-card__order">
+								<span class="menu-card__order__price">40€</span>
+								<label for="4" class="menu-card__order__label">
+									<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
+								</label>
+							</div>
 						</div>
-						<div class="menu-card__order">
-							<span class="menu-card__order__price">35€</span>
-							<label for="2" class="menu-card__order__label">
-								<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
-							</label>
+						<div class="menu-card">
+							<input required type="radio" name="dishes" id="5" class="menu-card__radio">
+							<div class="menu-card__text">
+								<h3 class="menu-card__text__title">Langoustine poêlée</h3>
+								<span class="menu-card__text__desc">Purée de patate douce</span>
+							</div>
+							<div class="menu-card__order">
+								<span class="menu-card__order__price">35€</span>
+								<label for="5" class="menu-card__order__label">
+									<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
+								</label>
+							</div>
+						</div>
+						<div class="menu-card">
+							<input required type="radio" name="dishes" id="6" class="menu-card__radio">
+							<div class="menu-card__text">
+								<h3 class="menu-card__text__title">Mijoté de queue de boeuf</h3>
+								<span class="menu-card__text__desc">Et riz sauvage aux zestes de citron</span>
+							</div>
+							<div class="menu-card__order">
+								<span class="menu-card__order__price">44€</span>
+								<label for="6" class="menu-card__order__label">
+									<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
+								</label>
+							</div>
 						</div>
 					</div>
-					<div class="menu-card">
-						<input required type="radio" name="appetizer" id="3" class="menu-card__radio">
-						<div class="menu-card__text">
-							<h3 class="menu-card__text__title">Homard et espuma de potiron</h3>
-							<span class="menu-card__text__desc">Mariné aux zestes d'orange</span>
+				</div>
+				<div class="menu-wrapper__menu__section">
+					<h2 class="menu-wrapper__menu__section__title">
+						<span class="menu-wrapper__menu__section__title__underline">Dess</span>erts
+					</h2>
+					<div class="menu-wrapper__menu__section__cards">
+						<div class="menu-card">
+							<input required type="radio" name="desserts" id="7" class="menu-card__radio">
+							<div class="menu-card__text">
+								<h3 class="menu-card__text__title">Macaron noisette et chocolat</h3>
+								<span class="menu-card__text__desc">Glace au caramel brun et sel de Guérande</span>
+							</div>
+							<div class="menu-card__order">
+								<span class="menu-card__order__price">18€</span>
+								<label for="7" class="menu-card__order__label">
+									<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
+								</label>
+							</div>
 						</div>
-						<div class="menu-card__order">
-							<span class="menu-card__order__price">20€</span>
-							<label for="3" class="menu-card__order__label">
-								<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
-							</label>
+						<div class="menu-card">
+							<input required type="radio" name="desserts" id="8" class="menu-card__radio">
+							<div class="menu-card__text">
+								<h3 class="menu-card__text__title">Baba au rhum revisité</h3>
+								<span class="menu-card__text__desc">Avec son coulis de citron</span>
+							</div>
+							<div class="menu-card__order">
+								<span class="menu-card__order__price">22€</span>
+								<label for="8" class="menu-card__order__label">
+									<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
+								</label>
+							</div>
 						</div>
-					</div>
-					<div class="menu-card">
-						<input required type="radio" name="appetizer" id="3b" class="menu-card__radio">
-						<div class="menu-card__text">
-							<h3 class="menu-card__text__title">Foie gras de canard cuit entier</h3>
-							<span class="menu-card__text__desc">Confiture de figue et pain toasté</span>
-						</div>
-						<div class="menu-card__order">
-							<span class="menu-card__order__price">35€</span>
-							<label for="3b" class="menu-card__order__label">
-								<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
-							</label>
+						<div class="menu-card">
+							<input required type="radio" name="desserts" id="9" class="menu-card__radio">
+							<div class="menu-card__text">
+								<h3 class="menu-card__text__title">Tarte au citron meringuée</h3>
+								<span class="menu-card__text__desc">Déstructurée</span>
+							</div>
+							<div class="menu-card__order">
+								<span class="menu-card__order__price">23€</span>
+								<label for="9" class="menu-card__order__label">
+									<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
+								</label>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="menu-wrapper__menu__section">
-				<h2 class="menu-wrapper__menu__section__title">
-					<span class="menu-wrapper__menu__section__title__underline">Plat</span>s
-				</h2>
-				<div class="menu-wrapper__menu__section__cards">
-					<div class="menu-card">
-						<input required type="radio" name="dishes" id="4" class="menu-card__radio">
-						<div class="menu-card__text">
-							<h3 class="menu-card__text__title">Noix de coquilles Saint-Jacques</h3>
-							<span class="menu-card__text__desc">Sur lit de purée de céleri-rave</span>
-						</div>
-						<div class="menu-card__order">
-							<span class="menu-card__order__price">40€</span>
-							<label for="4" class="menu-card__order__label">
-								<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
-							</label>
-						</div>
-					</div>
-					<div class="menu-card">
-						<input required type="radio" name="dishes" id="5" class="menu-card__radio">
-						<div class="menu-card__text">
-							<h3 class="menu-card__text__title">Langoustine poêlée</h3>
-							<span class="menu-card__text__desc">Purée de patate douce</span>
-						</div>
-						<div class="menu-card__order">
-							<span class="menu-card__order__price">35€</span>
-							<label for="5" class="menu-card__order__label">
-								<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
-							</label>
-						</div>
-					</div>
-					<div class="menu-card">
-						<input required type="radio" name="dishes" id="6" class="menu-card__radio">
-						<div class="menu-card__text">
-							<h3 class="menu-card__text__title">Mijoté de queue de boeuf</h3>
-							<span class="menu-card__text__desc">Et riz sauvage aux zestes de citron</span>
-						</div>
-						<div class="menu-card__order">
-							<span class="menu-card__order__price">44€</span>
-							<label for="6" class="menu-card__order__label">
-								<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
-							</label>
-						</div>
-					</div>
-				</div>
+			<div class="menu-wrapper__container">
+				<input type="submit" class="button menu-wrapper__container__order-button" value="Commander">
 			</div>
-			<div class="menu-wrapper__menu__section">
-				<h2 class="menu-wrapper__menu__section__title">
-					<span class="menu-wrapper__menu__section__title__underline">Dess</span>erts
-				</h2>
-				<div class="menu-wrapper__menu__section__cards">
-					<div class="menu-card">
-						<input required type="radio" name="desserts" id="7" class="menu-card__radio">
-						<div class="menu-card__text">
-							<h3 class="menu-card__text__title">Macaron noisette et chocolat</h3>
-							<span class="menu-card__text__desc">Glace au caramel brun et sel de Guérande</span>
-						</div>
-						<div class="menu-card__order">
-							<span class="menu-card__order__price">18€</span>
-							<label for="7" class="menu-card__order__label">
-								<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
-							</label>
-						</div>
-					</div>
-					<div class="menu-card">
-						<input required type="radio" name="desserts" id="8" class="menu-card__radio">
-						<div class="menu-card__text">
-							<h3 class="menu-card__text__title">Baba au rhum revisité</h3>
-							<span class="menu-card__text__desc">Avec son coulis de citron</span>
-						</div>
-						<div class="menu-card__order">
-							<span class="menu-card__order__price">22€</span>
-							<label for="8" class="menu-card__order__label">
-								<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
-							</label>
-						</div>
-					</div>
-					<div class="menu-card">
-						<input required type="radio" name="desserts" id="9" class="menu-card__radio">
-						<div class="menu-card__text">
-							<h3 class="menu-card__text__title">Tarte au citron meringuée</h3>
-							<span class="menu-card__text__desc">Déstructurée</span>
-						</div>
-						<div class="menu-card__order">
-							<span class="menu-card__order__price">23€</span>
-							<label for="9" class="menu-card__order__label">
-								<i class="fa-solid fa-circle-check menu-card__order__label__icon"></i>
-							</label>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="menu-wrapper__container">
-			<input type="submit" class="button menu-wrapper__container__order-button" value="Commander" />
-		</div>
+		</form>
 	</section>
 	<footer class="footer">
 		<h4 class="footer__title">ohmyfood</h4>

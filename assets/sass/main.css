@@ -161,25 +161,22 @@ main {
 .restaurant-card {
   position: relative;
   background-color: white;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
   box-shadow: 0 6px 6px #d2d2d2;
   border-radius: 15px;
   height: 220px;
   margin: 10px 0;
 }
-.restaurant-card__img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 15px 15px 0 0;
-  height: 70%;
+.restaurant-card label {
+  position: absolute;
+  bottom: 15px;
+  right: 5px;
 }
 .restaurant-card--new::before {
   content: "Nouveau";
   position: absolute;
   right: 15px;
   top: 15px;
+  z-index: 5;
   background-color: #99e2d0;
   color: #2b977c;
   padding: 5px 10px;
@@ -187,26 +184,44 @@ main {
   border-radius: 2px;
   font-weight: bold;
 }
-.restaurant-card__infos {
+.restaurant-card__body {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-left: 10px;
-  height: 30%;
+  flex-direction: column;
+  width: 100%;
+  height: 220px;
+  margin: 0;
 }
-.restaurant-card__infos__text {
-  height: 80%;
+.restaurant-card__body__img {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 160px;
+}
+.restaurant-card__body__text {
+  height: 50%;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-.restaurant-card__infos__text__title {
+.restaurant-card__body__text__title {
   margin: 0;
 }
 
 @media screen and (min-width: 800px) {
   .restaurant-card {
     width: 45%;
+    height: 250px;
+  }
+  .restaurant-card__body {
+    width: 100%;
     height: 250px;
   }
 }
@@ -450,8 +465,8 @@ main {
 }
 .loader__bar:nth-child(3) {
   left: 56px;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
+  -webkit-animation-delay: 0ms;
+          animation-delay: 0ms;
 }
 
 @-webkit-keyframes loader {
