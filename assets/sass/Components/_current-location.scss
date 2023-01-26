@@ -15,7 +15,7 @@
 	}
 }
 
-@media screen and (min-width: 800px) {
+@mixin for-tablet-and-desktop-only {
 	.current-location {
 		background-color: white;
 		width: 45%;

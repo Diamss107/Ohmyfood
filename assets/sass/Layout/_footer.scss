@@ -31,8 +31,7 @@
 		}
 	}
 }
-
-@media screen and (min-width: 800px) {
+@mixin for-tablet-and-desktop-only {
 	.footer {
 		margin-top: 0;
 		align-items: center;

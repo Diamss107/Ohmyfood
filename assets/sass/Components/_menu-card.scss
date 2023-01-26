@@ -48,6 +48,7 @@
 			overflow: inherit;
 			text-overflow: inherit;
 			margin: 0;
+			margin-bottom: 5px;
 			font-size: 1em;
 		}
 
@@ -67,7 +68,7 @@
 		transition: all $animationDuration ease-in-out;
 
 		&__price {
-			margin-bottom: 5px;
+			margin-bottom: 11px;
 			align-self: flex-end;
 			font-size: 0.9em;
 			margin-right: 12px;
@@ -109,7 +110,7 @@
 	}
 }
 
-@media screen and (min-width: 800px) {
+@mixin for-tablet-and-desktop-only {
 	.menu-card {
 		width: 100%;
 	}

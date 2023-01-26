@@ -11,7 +11,7 @@
 		flex-direction: column;
 	}
 }
-@media screen and (min-width: 800px) {
+@mixin for-tablet-and-desktop-only {
 	.restaurants {
 		margin-top: 0;
 		background-color: white;

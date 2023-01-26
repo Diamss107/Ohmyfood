@@ -98,8 +98,7 @@
 		opacity: 1;
 	}
 }
-
-@media screen and (min-width: 800px) {
+@mixin for-tablet-and-desktop-only {
 	.restaurant-img {
 		&__image {
 			width: 100%;

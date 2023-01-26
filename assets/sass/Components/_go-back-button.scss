@@ -8,7 +8,8 @@
 	left: 20px;
 	margin-bottom: 5px;
 }
-@media screen and (min-width: 800px) {
+
+@mixin for-tablet-and-desktop-only {
 	.go-back-button {
 		$rightAndLeftMargin: 20px;
 		position: initial;

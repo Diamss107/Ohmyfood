@@ -14,8 +14,7 @@
 		font-size: 2em;
 	}
 }
-
-@media screen and (min-width: 800px) {
+@mixin for-tablet-and-desktop-only {
 	.header {
 		box-shadow: none;
 		width: 45%;

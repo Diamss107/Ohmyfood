@@ -43,7 +43,7 @@
 	}
 }
 
-@media screen and (min-width: 800px) {
+@mixin for-tablet-and-desktop-only {
 	.tuto-card {
 		width: 30%;
 	}
