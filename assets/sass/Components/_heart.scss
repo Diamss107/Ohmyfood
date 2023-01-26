@@ -37,7 +37,7 @@ $transitionDuration: 300ms;
 	}
 }
 
-@mixin for-tablet-and-desktop-only {
+@include for-tablet-and-desktop-only {
 	.heart-icon {
 		&:hover > &-solid {
 			cursor: pointer;

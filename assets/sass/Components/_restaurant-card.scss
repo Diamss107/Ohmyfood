@@ -68,7 +68,7 @@
 	}
 }
 
-@mixin for-tablet-and-desktop-only {
+@include for-tablet-and-desktop-only {
 	.restaurant-card {
 		width: 45%;
 		height: 250px;

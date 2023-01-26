@@ -9,7 +9,7 @@
 	margin-bottom: 5px;
 }
 
-@mixin for-tablet-and-desktop-only {
+@include for-tablet-and-desktop-only {
 	.go-back-button {
 		$rightAndLeftMargin: 20px;
 		position: initial;

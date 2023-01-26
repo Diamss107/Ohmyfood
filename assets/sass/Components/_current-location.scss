@@ -15,7 +15,7 @@
 	}
 }
 
-@mixin for-tablet-and-desktop-only {
+@include for-tablet-and-desktop-only {
 	.current-location {
 		background-color: white;
 		width: 45%;

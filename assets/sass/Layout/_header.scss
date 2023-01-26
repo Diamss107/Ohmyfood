@@ -14,10 +14,10 @@
 		font-size: 2em;
 	}
 }
-@mixin for-tablet-and-desktop-only {
+@include for-tablet-and-desktop-only {
 	.header {
 		box-shadow: none;
-		width: 45%;
+		width: 65%;
 		justify-content: flex-start;
 	}
 }

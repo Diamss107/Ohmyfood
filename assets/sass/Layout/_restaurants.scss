@@ -11,7 +11,7 @@
 		flex-direction: column;
 	}
 }
-@mixin for-tablet-and-desktop-only {
+@include for-tablet-and-desktop-only {
 	.restaurants {
 		margin-top: 0;
 		background-color: white;
